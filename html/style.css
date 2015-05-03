@@ -1,0 +1,155 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, button, textarea, a {
+  	background: transparent;
+	background: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	font-weight: normal;
+	font-family:"Arial", "Helvetica"
+}                  
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display:block;
+}
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; padding:0 0 1.5em 0; }
+input, select { vertical-align:middle; }
+
+/* End of Reset CSS */
+
+
+
+
+
+body {
+	background: #000;
+	width: 100%;
+	height: 100%;
+}
+html {
+	width: 100%;
+	height: 100%;
+}
+
+.no-boxshadow input:invalid, 
+.no-boxshadow textarea:invalid {  }
+
+/* By default the selection color is pink */
+::-moz-selection{ background: #468ab1; color:#fff; text-shadow: none; }
+::selection { background:#468ab1; color:#fff; text-shadow: none; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+
+
+ul, ol, p {
+	padding: 0 0 1.5em 0;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+p {
+	font-family: Arial;
+	color: #2e2d2d;
+	font-size: 13px;
+	line-height: 22px;	
+}
+
+a {
+	color: #8d3d00;
+}
+
+article blockquote {
+	border-left: 1px solid #ebe0b5;
+	font-family: Arial;
+	color: #ebe0b5;
+	font-size: 13px;
+	line-height: 22px;
+	padding: 15px 0 15px 30px;
+	margin: 5px 0 10px 30px;
+}
+article ul {
+	margin-left: 20px;
+}
+article ul li {
+	padding: 5px;
+	list-style: square;
+	font-family: Arial;
+	color: #ebe0b5;
+	font-size: 13px;
+	line-height: 22px;
+}
+
+article ol {
+	margin-left: 20px;
+}
+article ol li {
+	padding: 5px;
+	list-style-type: decimal;
+	font-family: Arial;
+	color: #ebe0b5;
+	font-size: 13px;
+	line-height: 22px;
+}
+
+
+/* remember to define focus styles! */
+:focus {outline: 0;}
+
+img {border:0;}
+a img {border:0}
+
+/* Float Definitions -----------------------------------------------------------*/
+
+.clear {clear:both;} 
+
+.right {float: right;} 
+
+.left {float: left;}
+
+.alignright {float: right;margin: 0 0 2px 7px;}
+.alignleft {float: left;margin: 0 7px 2px 0;}
+
+img.left, img.alignleft {float: left;margin: 0 15px 7px 0;}
+
+img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
+
+.post img.aligncenter, .attachment img.aligncenter { display:block; margin: 0 auto; text-align: center; }
+
+.nopad {
+	padding: 0px !important;
+}
+.nomargin {
+	margin: 0px !important;
+}
+.noborder {
+	border: none !important;
+}
+
+
+
+/* Base Styles -----------------------------------------------------------*/
