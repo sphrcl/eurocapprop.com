@@ -32,7 +32,7 @@ get_header();
 					$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
 				?>
 				
-					<div class="left" style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"></div>
+					<div class="left" style="background-image: url(<?php echo tt($imgsrc[0],580,550); ?>);"></div>
 
 					<div class="right">
 						
@@ -71,7 +71,7 @@ get_header();
 						<h3><?php the_title(); ?></h3>
 						<h4><?php echo get_post_meta($post->ID,'misfit_title_position',true); ?></h4>
 						<div class="person-description">
-							<div class="left"><?php the_content(); ?></div>
+							<div class="left"><?php echo excerpt(20); ?></div>
 							<a href="<?php the_permalink(); ?>"><img class="right" src="<?php bloginfo('template_url'); ?>/images/right-arrow.png"></a>
 						</div>
 

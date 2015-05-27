@@ -91,7 +91,7 @@ p {
   color: #787878;
   font-family: 'avenir-med',"Helvetica", "Arial";
   font-size: 14px;
-  line-height: 23px;
+  line-height: 1.8;
   letter-spacing: 0.03em;
 }
 
@@ -180,7 +180,8 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 
 .lining .fa.fa-close,
 .page-slider .controls div,
-.menu li a {
+.menu li a,
+.person-description .right {
 	transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -625,6 +626,108 @@ ul.topnavigation li a:hover {
     margin-bottom: 20px;
     text-align: center;
 }
+
+
+
+
+/* PAGE - Leadership and Management ################################################################################################ */
+
+.page-template-page-leadership h2 {
+    color: #b6b6b6;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.top-person {
+	overflow: hidden;
+	margin-bottom: 60px;
+}
+
+.top-person .left {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    width: 48%;
+}
+
+.team li:first-child {
+    display: none;
+}
+
+.top-person .right {
+	width: 48%;
+}
+
+.top-person .right h3 {
+    color: #b6b6b6;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.top-person .right > h4 {
+    margin-bottom: 20px;
+}
+
+.team {
+	text-align:center;
+}
+
+.team > li {
+	display:inline-block;
+	margin-right:1.5%;
+	text-align:left;
+	width:32%;
+}
+
+.team > li:last-child {
+	margin-right:0;
+}
+
+.team li > div {
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:240px;
+	margin-bottom:20px;
+	width:100%;
+}
+
+.team li div.person-description {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.team li h3 {
+	color:#545454;
+	margin-bottom: 5px;
+}
+
+.team li h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.team .person-description p {
+	color:#393939;
+}
+
+.person-description .left {
+    width: 75%;
+}
+
+.person-description .right {
+	position: absolute;
+	right: 30px;
+	top: 30%;
+	opacity: .5;
+}
+	.person-description .right:hover {
+		opacity: 1;
+	}
+
 
 
 /* SLIDER */
