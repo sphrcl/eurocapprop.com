@@ -18,27 +18,40 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<?php if (get_option('misfit_custom_favicon') == '') { ?>
-	
-	<link rel="icon" href="<?php bloginfo ('template_url'); ?>/cebo_options/<?php bloginfo ('template_url'); ?>/images/admin_sidebar_icon.png" type="image/x-ico"/>
-	
-	<? } else { ?>
-	
-	<link rel="icon" href="<?php echo get_option('misfit_custom_favicon'); ?>" type="image/x-ico"/>
-	
-	<? } ?>
+		
+	<link rel="icon" href="<?php bloginfo('template_url'); ?>/images/favicon.png" type="image/x-ico"/>
+
 	
 	
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php if ( get_option('misfit_feedburner_url') <> "" ) { echo get_option('misfit_feedburner_url'); } else { echo get_bloginfo_rss('rss2_url'); } ?>" />
 	
 	
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<!-- Google Web Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/flexslider.css">
 
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo ('template_url'); ?>/js/owl-carousel/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo ('template_url'); ?>/js/owl-carousel/owl.theme.css">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo ('template_url'); ?>/js/owl-carousel/owl.transitions.css">
+
+	<!-- google analytics -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-62512349-1', 'auto');
+		ga('send', 'pageview');
+
+		</script>
+	
 	<!-- Media Queries -->	
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/media.css">
-
-	<!-- Your jquery library is included in the /library/simple_functions.php file line 294 //ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js  -->
-	
 
 	<?php
 		/****************** DO NOT REMOVE **********************
@@ -49,6 +62,26 @@
 			wp_enqueue_script( 'comment-reply' );
 		wp_head();
 	?>
+	
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.lightbox_me.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider-min.js"></script>
+	
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js'></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/general.js"></script>
+
 	</head> 
 	
-	<body>
+	<body <?php body_class(); ?>>
+
+	<div id="header">
+
+		<div class="container">
+			<div class="logo">
+				<a href="<?php bloginfo ('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/ecp-logo.png" alt="The Water Gate Hotel"></a>
+			</div>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ,  'container' => false, 'items_wrap' => '%3$s' ) ); ?>
+		</div>
+
+	</div>

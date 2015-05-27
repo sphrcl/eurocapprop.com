@@ -29,7 +29,9 @@ include(TEMPLATEPATH . '/library/post_types.php');
  /* ................. SOME OPTIONS FOR POSTS .................... 
 /* Below is an include to a few options for your posts.
 include(TEMPLATEPATH . '/options/single-options.php');*/
-
+include(TEMPLATEPATH .  '/options/page-options.php');
+include(TEMPLATEPATH .  '/options/slider-with-description-repeatable-fields.php');
+include(TEMPLATEPATH .  '/options/leadership-management-options.php');
 
 
  /* ................. SOME OPTIONS FOR PROJECTS .................... */
@@ -59,3 +61,6 @@ include(TEMPLATEPATH . '/library/widgets.php');
 define( 'SS_BASE_DIR', TEMPLATEPATH . '/' );
 define( 'SS_BASE_URL', get_template_directory_uri() . '/' );
 
+function tt($image,$width,$height){
+    return bloginfo('template_url') . "/library/thumb.php?src=$image&w=$width&h=$height";
+}

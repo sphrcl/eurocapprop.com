@@ -1,13 +1,15 @@
 <?php
 
-register_nav_menus( array(
-	'primary' => __( 'Primary Navigation', 'misfit' ),
-) );
-
-
-register_nav_menus( array(
-	'category' => __( 'Categorical Navigation', 'misfit' ),
-) );
+add_action( 'after_setup_theme', 'southern_navmenus' );
+function southern_navmenus() {
+	register_nav_menus(array(
+		'primary' => __( 'Primary Navigation', 'misfit' ),
+		'secondary' => __( 'Homepage Navigation', 'misfit' ),
+		'footer_nav' => __( 'Footer Navigation', 'misfit' ),
+		'wedding_nav' => __( 'Weddings Navigation', 'misfit' ),
+		'meeting_nav' => __( 'Meetings and Events Navigation', 'misfit' ),
+	));
+}
 
 
 // Sidebar Activation
@@ -296,13 +298,6 @@ function my_jquery_enqueue() {
 }
 
 
-function get_avatar_url($author_id, $size){
-    $get_avatar = get_avatar( $author_id, $size );
-    preg_match("/src='(.*?)'/i", $get_avatar, $matches);
-    return ( $matches[1] );
-}
-
-
 // Removed shortcodes from the content
 function  strip_shortcode_gallery( $content ) {
     preg_match_all( '/'. get_shortcode_regex() .'/s', $content, $matches, PREG_SET_ORDER );
@@ -339,7 +334,7 @@ function nerdy_get_images($size = 'thumbnail', $limit = '0', $offset = '0') {
             <li>
                 <a href="<?php echo $img_url; ?>"><img src="<?php echo $img_preview; ?>" alt="<?php echo $img_caption; ?>" title="<?php echo $img_title; ?>"></a>
             </li>
-            <?
+            <?php
             }
             $i++;
         }

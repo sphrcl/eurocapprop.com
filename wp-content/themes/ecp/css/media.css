@@ -1,208 +1,41 @@
-/* ================================================  MOBILES BELOW 399 ======================================= */
+/* ================================================ 1279 ======================================= */
 
+@media only screen and (max-width : 1279px) {
 
-@media only screen 
-and (max-width : 399px) 
-{	
+	.explorebox {
+	    width: calc(33.33% - 30px);
+	}
 
+	.explorebox span, .explorebox .flexslider li span {
+		height: 310px;
+	}
 
-
-}
-
-
-
-
-/* ================================================  MOBILES BELOW 480 to 400 ======================================= */
-
-
-@media only screen 
-and (min-width : 400px) 
-and (max-width : 479px) 
-{	
-
-
-
-
-
-
-
+	.footernav {
+		width: 495px;
+	}
 
 }
 
 
 
-/* ================================================  MOBILES BELOW 480 to 640 ======================================= */
+/* ================================================ 1024 ======================================= */
 
+@media only screen and (max-width : 1100px) {
 
-@media only screen 
-and (min-width : 480px) 
-and (max-width : 639px) 
-{	
+	.container.c2 .flexslider {
+	    width: 50% !important;
+	}
 
+	.container.c2 .flexslider li span {
+		width: 100% !important;
+	}
 
+	.container.c2 .sliderdesc {
+	    width: calc(50% - 30px);
+	}
 
-
-
-
-
-
-				
-}
-
-
-@media only screen 
-and (max-width : 639px) 
-{	
-
-	
-	
-	/* -------- ------------ GENERAL ------------------- */
-	
-	
-	.column_one_half, .column_one_third, .column_one_fourth, .column_two_thirds, .column_three_fourths { width: 100% }
-	
-	
-	
-	
-
-	/* -------- ------------ HOME ------------------- */
-	
-	
-	.post { width: 100%; }
-	.home-intro-copy h1 { font-size: 50px !important; text-align: left; max-width: 100%; margin-bottom: 0; display: inline-block; }
-	.searcher { width: 100%; }
-	.dripper { display: none; }
-	.searcher input { padding: 32px 0 0 45px; font-size: 16px; width: 80%;}
-	.querybar { min-height: 87px; }
-	.searcher:after { font-size: 20px; }
-	
-	
-	.openleftnav {  display: none; }
-	.openrightnav { top: 2px; right: 13px; z-index: 99999999; }
-	.closerightnav{ top: 2px; right: 13px;  }
-	.unrevealed .openrightnav { top: -60px; }
-	.revealed .openrightnav { top: 2px; }
-	.flipped-right { left: -290px; }
-	
-	.flipped-right .intro-effect-push .header { left: -290px; }
-	.housearrest { height: 60px; }
-	.flipped-right .homecontainer { left: -290px; }
-	.home .flipped-right .homecontainer { left: -290px; }
-	.hiddenauthor { top: 10px; opacity: 1; z-index: 9999999999; width: 90px; left: 0; }
-	.revealed .hiddenauthor  { top: 10px; opacity: 1; z-index: 9999999999; width: 90px; left: 0; }
-	
-	.hiddenauthor .author {position: absolute; left: 13px;  height: 45px; width: 45px;  top: -4px; }
-	.rstilled .hiddenauthor { left: -100px;}
-	.rightnav { width: 250px }
-	.rightnav .navigations ul li a { font-size: 30px; line-height: 38px; }
-	
-	
-	.post { height: 350px; }
-	.post .letsgo i { color: #fff; }
-	.post .whyhello { bottom: 30px; left: 20px; opacity: 1 !important; visibility: visible !important;  z-index: 100;}
-	.post .dearfriend { opacity: 1; visibility: visible; background: transparent; border-top: 0; border-left: 0;}
-	.innerpost { height: 100% !important; width: 100% !important;  margin-top: 0% !important; margin-left: 0% !important;}
-	.post .dearfriend .p-lining { display: none; }
-	
-	.noimage .letsgo i { color: #333; }
-	.noimage .whyhello { display: none; bottom: 30px; left: 20px; opacity: 1 !important; visibility: visible !important;}
-	.noimage .dearfriend { opacity: 1; visibility: visible; background: #fff; }
-	.noimage .dearfriend .p-lining { display: block; padding: 0 25px; width: 70%; }
-	.noimage .dearfriend h3 a { font-size:30px; }
-	.noimage .dearfriend h3 { line-height: 32px;}
-	.noimg .pagecopy { padding-top: 115px; }
-	#comments h2 { font-size: 16px; line-height: 16px; padding: 20px 10px }
-	#comments h2:after { display: none; }
-	#comments h2:before { top: -5px; left: 50%; margin-left: -5px;}
-	.letterbox input { width: 90%;}
-	.fn { font-size: 20px; }
-	.usercomments li .reply { top: 3px; }
-	.commentmetadata a { font-size: 12px; }
-	
-
-	.authorsection { display: none; }
-	.postlist { margin-top: -50px; }
-	#prevslide, #nextslide { opacity: 0 !important; }
-	.querybar:before{ display: none; }
-	.moreposts { height: 50px; padding-top: 30px;}
-
-
-	/* -------- ------------ POST ------------------- */
-	
-	
-	.flipped-right .header:before {  opacity: 0; visibility: hidden;  display: none; }
-	.flipped-right .header { opacity: 0; visibility: hidden; display: none; }
-	.rightnav .navigations ul li { margin: 5px 0; }
-	
-	.post-intro .commentcounter { padding: 0; }
-	.post-intro .commentcounter:before { font-size: 35px; top: -20px; right: 0; }
-	.post-intro .commentcounter a { padding: 0; top: -8px; right: 12px;}
-	.noimg .content .post-intro h1 { font-size: 50px; line-height: 45px; max-width: 90%; }
-	.page .navigation { background: transparent; }
-	 a.flaticon-google115 { top: -7px; position: relative; }
-	.comeback, .modify .hiddenauthor { top: 10px; opacity: 1; z-index: 9999999999; width: 90px; left: 0;}
-	.title { bottom: 30%; width: 70%;}
-	.title h1 { font-size: 35px; line-height: 30px; }	
-	.header .socials { display: none; }
-	.pagecopy article { width: 95%; }
-	
-	.pagecopy { padding-top: 115px; }
-	.nowreturn { padding-top: 50px; }
-	.content .post-intro h1 { max-width: 95%; font-size: 42px; line-height: 38px; }
-	.content blockquote { max-width: 100%; text-align: center; margin: 10px 15px 40px 0; text-align: center; font-size: 32px; line-height: 29px; }
-	.content blockquote p {  font-size: 32px; line-height: 29px;  }
-	.content blockquote:before { bottom: -20px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); }
-	
-	.related .fullbanner { height: 400px; }
-	.related .whyhello { width: 60%; bottom: 30px; left: 30px;}
-	.fullbanner .whyhello h3 a { font-size: 20px; line-height: 20px; }
-	.related .letsgo { bottom: 28px; right: 20px; }
-	
-	.fullbanner-overlay h1 { font-size: 45px; text-align: center; }
-	.fullbanner-overlay { max-width: 100%; text-align: center; }
-	.fullbanner-overlay p { max-width: 87%; }
-	.post-intro { padding: 15px 0 60px 0 }
-	.post-intro .socials { bottom: 35px; left: 0; }
-	
-	ul.tabs { float: none; height: inherit; }
-	ul.tabs li { float: none; border-bottom: 1px solid #eee;}
-	#toggle-view .panel { padding: 30px 15px; }
-	.fullbanner-overlay p { display: none;}
-	.touchcarousel, .gallerybanner { height: 350px; }
-	#carousel-gallery .touchcarousel-item { height: 350px; }
-	.content blockquote::before { left: 0%; transform: translateX(0%); -webkit-transform: translateX(0%);}
-	
-	
-	
-	.interior .postlist { margin-top: -30px; }
-	.quietbanner { height: 0;}
-	.navigation-al p { font-size: 18px; }
-	.navigation-al div i { font-size: 40px; }
-	.navigation-al div.previousposts { margin-top: -18px; }
-	div.alignright.nextposts { margin-top: 5px; }
-	.woocommerce .woocommerce-breadcrumb { opacity: 0; }
-	.cart_item { display: block; }
-	
-	.woocommerce table.shop_table th, .woocommerce-page table.shop_table th { display: inline; max-width: 20px; font-weight: 700; line-height: 18px; padding: 9px 2px !important;}
-	.woocommerce table.shop_table td, .woocommerce-page table.shop_table td { display: block; border-top: 1px solid rgba(0,0,0,.1); padding: 6px 0px; vertical-align: middle; width: 100%;}
-	.woocommerce table.shop_table, .woocommerce-page table.shop_table { overflow: hidden; display: block; }
-	.woocommerce #content .quantity, .woocommerce .quantity, .woocommerce-page #content .quantity, .woocommerce-page .quantity { margin: 0 !important; }
-	.actions input { width: 90% !important; display: block !important; margin: 5px 0 !important; }
-	.woocommerce .shop_table input.button { width: 90% !important; display: block !important;  float: none !important; margin: 5px 0 !important; }
-	article input { max-width: calc(100% - 26px); }
-	#comments { max-height: inherit; }
-	.touchcarousel .arrow-holder.right { right: -30px; }
-	.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last { float: none !important; width: 100% !important;}
-	.woocommerce form .form-row-last, .woocommerce-page form .form-row-last { float: none !important; }
-	
-	
-	.intro-effect-push.modify .header {
-		opacity: 1;
-		-webkit-transform: translateY(-89%) scale(1);
-		-ms-transform: translateY(-89%) scale(1);
-		transform: translateY(-89%) scale(1);
-		overflow: hidden;
-		background: #333;
+	.footernav {
+		width: 320px;
 	}
 
 }
@@ -210,43 +43,41 @@ and (max-width : 639px)
 
 
 
-/* ================================================  LARGE MOBILE DEVICES AND SMALL TABLETS BELOW 799  ======================================= */
+/* ================================================ 1000 ======================================= */
 
+@media only screen and (max-width : 1000px) {
 
-@media only screen 
-and (min-width : 640px) 
-and (max-width : 799px) 
-{	
+	.aboutbox {
+		width: 89%;
+	}
 	
-
-
-
-}
-/* ================================================  SLIGHTLY SMALLER RESOLUTIONS, BUT NOT QUITE IPHONE ======================================= */
-
-
-@media only screen 
-and (min-width : 800px) 
-and (max-width : 854px) 
-{	
-	
-
 }
 
 
 
+/* ================================================ 900 ======================================= */
 
+@media only screen and (max-width : 900px) {
 
-/* ================================================  LARGE PHONE SCREENS SMALLER RESOLUTIONS  ======================================= */
+	.explorebox span, .explorebox .flexslider li span {
+	    height: 240px;
+	}
 
+	.footernav {
+	  width: 320px;
+	}
 
-@media only screen 
-and (min-width : 855px) 
-and (max-width : 960px) 
-{	
+	.footernav {
+  		float: left;
+  		 margin-top: 90px;
 
-	
+	}
 
+	div#footer {
+	  margin-bottom: 0px;
+	  height: 300px;
+	  padding: 45px 0px 0px 0px;
+	}
 
 
 
@@ -254,99 +85,329 @@ and (max-width : 960px)
 
 
 
-/* ================================================  IPADS AT LANDSCAPE WIDTH 1024  ======================================= */
-
-
-@media only screen 
-and (min-width : 961px) 
-and (max-width : 1024px) 
-{	
 
 
 
 
+/* ================================================ 768 ======================================= */
 
-		
+@media only screen and (max-width : 768px) {
+
+	.container.c2 .flexslider {
+	    width: 100% !important;
+	    float: none;
+	}
+
+	.container.c2 .sliderdesc {
+	    width: 100%;
+	    float: none;
+	    position: relative;
+	    margin-top: 20px;
+	}
+
+	.container.c2 h2 {
+		padding-bottom: 0;
+	}
+
+	.lightbox {
+	    width: 90%;
+	}
+	
+	.container.c2 .flexslider li span {
+		height:240px;
+	}
+	
+	.flex-control-nav { bottom: 5px; }
+	.flexevents .flex-control-nav { bottom: 5px; }
+
+	#dining .container {
+	  height: 655px;
+	}
+	
+}
+
+/* ================================================ 700 ======================================= */
+
+@media only screen and (max-width : 700px) {
+	
+	.logo img {
+	    min-width: 200px;
+	    position: absolute;
+	    width: 40%;
+	}
+
+	.explorebox span, .explorebox .flexslider li span {
+	    height: 190px;
+	}
+
+	.copyright {
+	    float: none;
+	    width: auto;
+	    text-align: center;
+	    font-size: 12px;
+	    line-height: 22px;
+	}
+
+	.footernav {
+	    float: none;
+	    text-align: center;
+	    width: auto;
+	}
+
+	.footersocial {
+	    float: none;
+	    text-align: center;
+	    padding: 75px 0 40px 0;
+	}
+	
+	
+	
+	.wpcf7-list-item {
+  margin-right: 4px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 6px;
+  position: Relative;
+  top: 16px;
+  line-height: 23px;
+  display: block;
+  }
+
+	.address, .phone {
+		text-align: center;
+	}
+
 }
 
 
-/* ================================================  FIRST STAGE LARGER THAN 1024PX UP TO LARGER BROWSERS  ======================================= */
 
+/* ================================================ MOBILES BELOW 650 ======================================= */
 
+@media only screen and (max-width : 650px) {
+	.flex-caption { display: none; }
+	.accomodations, .events, .dining, .specials { width: 90%; margin: auto; float: none; position: relative; bottom: inherit; }
+	.flexaccomodations, .flexdining, .flexspecials, .flexevents { width: 100%; margin: 0 0 30px 0}
+	.events h3, .accomodations h3, .dining h3, .specials h3 { font-size: 32px; }
+	.explorebox { float: none; width: 90%;  margin: 15px; }
+	div#explore { padding-bottom: 340px; }
 
-@media only screen 
-and (min-width : 1025px) 
-and (max-width : 1223px) 
-{		
-		
+	.logo {margin-left: -7px;}
 	
-	
-	
-	
-	
-	
+	.lining {
+		padding: 60px 20px;
+	}
+	.home .wpcf7 { width:inherit;}
+
+	.address, .phone {
+		text-align: center;
+	}
+
 }
 
 
 
-/* #Narrow Screen, Below 1400px (Portrait)
-================================================== */
+/* ================================================ 600 ======================================= */
 
-    /* Note: Design for a width of 768px */
+@media only screen and (max-width : 600px) {
 
+	.logo {
+	    text-align: center;
+	    float: none;
+	}
 
+	.logo img {
+		position: relative;
+	}
+	
+	#explore h3 { font-size: 42px; line-height: 45px;   padding: 30px 0; }
+	.reserve {
+	    float: none;
+	    margin: 0;
+	    width: 100%;
+	    text-align: center;
+	}
 
-@media only screen 
-and (min-width : 1224px) 
-and (max-width : 1300px) 
-{
+	.reserve > ul {
+	    float: none;
+	    width: 100%;
+	}
 
+	#header a.btn1 {
+	    float: none;
+	}
 
+	a.btn1 {
+	    display: none;
+	    font-size: 18px;
+	    padding: 10px 35px;
+	}
+	
+	a.mobihid {
+		display: inline-block;
+	}
 
+	.reserve ul li a {
+	    font-size: 18px;
+	    height: 35px;
+	    line-height: 36px;
+	    width: 35px;
+	}
 
+	.explorebox {
+	    float: none;
+	}
 
+	.explorebox span, .explorebox .flexslider li span {
+	    height: 440px;
+	}
+	
+	.copyblock h2 { line-height: 32px }
 
+	#dining .container {
+	  height: 800px;
+	}
+
+	div#header {
+		position: relative;
+		margin-top: 0;
+	}
+
+	div#slider {
+		margin-top: 10px;
+	}
+	
+	.address {
+		text-align: left;
+	}
 
 
 }
+
+
+
+/* ================================================ 500 ======================================= */
+
+@media only screen and (max-width : 500px) {
+
+	.flexslider li span, .flexevents {
+		height: 230px;
+	}
 	
-@media only screen 
-and (max-width : 1401px) 
-{	
+	.flexspecials li span {
+		height: 300px;
+	}
 
-	.home-intro { padding-top: 150px; }
-	.home-intro-copy { width: 90%; padding-bottom: 5%; }
 
+	.explorebox span, .explorebox .flexslider li span {
+	    height: 360px;
+	}
+
+	div#header {
+		/* margin-top: -203px; */
+	}
+
+	div#slider {
+		margin-top: 30px;
+	}
 
 }
-	
-	
-	
-
-
-@media only screen and (min-width: 1400px) and (max-width: 1450px) {
-		
-		
 
 
 
+/* ================================================ 400 ======================================= */
 
+@media only screen and (max-width : 400px) {
 
+	.explorebox span, .explorebox .flexslider li span {
+	    height: 310px;
+	}
+
+		/* footer edits */
+
+	.footersocial {
+	  top: 55px;
+	}
+
+	ul#menu-footer-menu {
+	  bottom: 50px;
+	}
+
+	div#footer {
+		height: 300px;
+	}
+
+	.address {
+
+  line-height: 40px;
+  text-transform: uppercase;
+  font-family: OpenSans-Bold;
+  letter-spacing: 0.1em;
+  float: none;
+  text-align: center;
+   width: inherit;
+}
+
+.address a {
+	font-size:  9px;
+	float: none;
+	width: inherit;
+}
+
+.phone a {
+	font-size: 21px;
+}
+
+.phone {
+  font-size: 13px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-family: OpenSans-Bold;
+  letter-spacing: 0.1em;
+  /* float: left; */
+  width: 100%;
+  text-align: center;
+}
+
+.copyright {
+  float: none;
+  width: auto;
+  text-align: center;
+  font-size: 10px;
+  line-height: 22px;
+  position: relative;
+  bottom: -165px;
+}
+
+.footernav {
+  position: relative;
+  bottom: 90px;
+  margin-top: 0px;
+}
+
+#footer .container > a img { width: 80px }
 
 }
 
 
-@media only screen and (min-width: 1451px) {
- 
- 
- 
- 
- 
-                
 
 
 
-} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

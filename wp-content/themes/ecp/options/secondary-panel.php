@@ -46,21 +46,21 @@ $meta_box = array(
 	'fields' => array(
 				
 		array( 
-              "name" => "Act Number",
-	          "desc" => "Just the number, por favor ",
-	          "id" => $prefix."_act",
+              "name" => "Subtitle",
+	          "desc" => "simple subtitle before the primary title",
+	          "id" => $prefix."_subtit",
 	          "type" => "text",
 	          "std" => ""
               )
-		,	
-		array( 
-              "name" => "Written From...",
-	          "desc" => "Where was this essay written (displays at the bottom of the essay)",
-	          "id" => $prefix."_from",
+        ,
+        array( 
+              "name" => "Outbound link",
+	          "desc" => "If you want this to link elsewhere (like a PDF) upload and paste the url here",
+	          "id" => $prefix."_outbound",
 	          "type" => "text",
 	          "std" => ""
               )
- 
+
        	)
 );
 /* ----------------------------------------------- DONT TOUCH BELOW UNLESS YOU KNOW WHAT YOU'RE DOING */
@@ -68,7 +68,7 @@ add_action('admin_menu', 'mytheme_add_box');
 // Add meta box
 function mytheme_add_box() {
 	global $meta_box;
-	foreach ( array( 'excerpto', 'event' ) as $page )
+	foreach ( array( 'page', 'event' ) as $page )
 	add_meta_box($meta_box['id'], $meta_box['title'], 'mytheme_show_box', $page, $meta_box['context'], 			$meta_box['priority']);
 }
 // Callback function to show fields in meta box

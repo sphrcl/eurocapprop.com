@@ -9,40 +9,7 @@
  
 ///////////////////////////////////////////////////////////////////////////// Custom Post Type
 
-add_action('init', 'project_items');
 
-function project_items()
-{
-  $labels = array(
-    'name' => _x('Portfolio Item', 'post type general name'),
-    'singular_name' => _x('Portfolio Item', 'post type singular name'),
-    'add_new' => _x('Add New', 'Portfolio Item'),
-    'add_new_item' => __('Add New Portfolio Item'),
-    'edit_item' => __('Edit Portfolio Item'),
-    'new_item' => __('New Portfolio Item'),
-    'view_item' => __('View Portfolio Item'),
-    'search_items' => __('Search Portfolio Items'),
-    'not_found' =>  __('No Portfolio Item found'),
-    'not_found_in_trash' => __('No Portfolio Item found in Trash'),
-    'parent_item_colon' => ''
-  );
-  $args = array(
-    'labels' => $labels,
-    'public' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'portfolio' ),
-    'capability_type' => 'post',
-    'menu_icon' => get_bloginfo('template_url').'/options/images/icon_project.png',
-    'hierarchical' => false,
-    'menu_position' => null,
-    'supports' => array('title','custom-fields','editor','author','excerpt','comments','thumbnail')
-  );
-  register_post_type('project',$args);
-}
-add_action("manage_posts_custom_column", "my_custom_columns");
-add_filter("manage_edit-project_columns", "my_project_columns");
 
 function my_project_columns($columns)
 {
@@ -111,6 +78,176 @@ wp_insert_term(
     'parent'=> $parent_term_id
   )
 );
+
+
+
+add_action('init', 'developments_items');
+function developments_items()
+{
+  $labels = array(
+    'name' => _x('Development', 'post type general name'),
+    'singular_name' => _x('Development', 'post type singular name'),
+    'add_new' => _x('Add New', 'Development'),
+    'add_new_item' => __('Add New Development'),
+    'edit_item' => __('Edit Development'),
+    'new_item' => __('New Development'),
+    'view_item' => __('View Development'),
+    'search_items' => __('Search Development Items'),
+    'not_found' =>  __('No Development found'),
+    'not_found_in_trash' => __('No Development found in Trash'),
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'development' ),
+    'capability_type' => 'post',
+    'menu_icon' => 'dashicons-building',
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array('title','custom-fields','editor','author','excerpt','thumbnail','revisions')
+  );
+  register_post_type('development',$args);
+}
+
+
+
+add_action('init', 'leadership_items');
+function leadership_items()
+{
+  $labels = array(
+    'name' => _x('Leadership', 'post type general name'),
+    'singular_name' => _x('Leadership', 'post type singular name'),
+    'add_new' => _x('Add New', 'Leadership'),
+    'add_new_item' => __('Add New Leadership'),
+    'edit_item' => __('Edit Leadership'),
+    'new_item' => __('New Leadership'),
+    'view_item' => __('View Leadership'),
+    'search_items' => __('Search Leadership Items'),
+    'not_found' =>  __('No Leadership found'),
+    'not_found_in_trash' => __('No Leadership found in Trash'),
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'leadership' ),
+    'capability_type' => 'post',
+    'menu_icon' => 'dashicons-businessman',
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array('title','custom-fields','editor','author','excerpt','thumbnail','revisions')
+  );
+  register_post_type('leadership',$args);
+}
+
+
+
+add_action('init', 'management_items');
+function management_items()
+{
+  $labels = array(
+    'name' => _x('Management', 'post type general name'),
+    'singular_name' => _x('Management', 'post type singular name'),
+    'add_new' => _x('Add New', 'Management'),
+    'add_new_item' => __('Add New Management'),
+    'edit_item' => __('Edit Management'),
+    'new_item' => __('New Management'),
+    'view_item' => __('View Management'),
+    'search_items' => __('Search Management Items'),
+    'not_found' =>  __('No Management found'),
+    'not_found_in_trash' => __('No Management found in Trash'),
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'management' ),
+    'capability_type' => 'post',
+    'menu_icon' => 'dashicons-admin-users',
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array('title','custom-fields','editor','author','excerpt','thumbnail','revisions')
+  );
+  register_post_type('management',$args);
+}
+
+
+
+add_action('init', 'partnership_items');
+function partnership_items()
+{
+  $labels = array(
+    'name' => _x('Partnership', 'post type general name'),
+    'singular_name' => _x('Partnership', 'post type singular name'),
+    'add_new' => _x('Add New', 'Partnership'),
+    'add_new_item' => __('Add New Partnership'),
+    'edit_item' => __('Edit Partnership'),
+    'new_item' => __('New Partnership'),
+    'view_item' => __('View Partnership'),
+    'search_items' => __('Search Partnership Items'),
+    'not_found' =>  __('No Partnership found'),
+    'not_found_in_trash' => __('No Partnership found in Trash'),
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'partnership' ),
+    'capability_type' => 'post',
+    'menu_icon' => 'dashicons-groups',
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array('title','custom-fields','editor','author','excerpt','thumbnail','revisions')
+  );
+  register_post_type('partnership',$args);
+}
+
+
+
+add_action('init', 'press_items');
+function press_items()
+{
+  $labels = array(
+    'name' => _x('Press', 'post type general name'),
+    'singular_name' => _x('Press', 'post type singular name'),
+    'add_new' => _x('Add New', 'Press'),
+    'add_new_item' => __('Add New Press'),
+    'edit_item' => __('Edit Press'),
+    'new_item' => __('New Press'),
+    'view_item' => __('View Press'),
+    'search_items' => __('Search Press Items'),
+    'not_found' =>  __('No Press found'),
+    'not_found_in_trash' => __('No Press found in Trash'),
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'press' ),
+    'capability_type' => 'post',
+    'menu_icon' => 'dashicons-media-document',
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array('title','custom-fields','editor','author','excerpt','thumbnail','revisions')
+  );
+  register_post_type('press',$args);
+}
 
 
 ?>

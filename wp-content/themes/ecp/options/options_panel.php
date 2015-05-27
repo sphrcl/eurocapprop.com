@@ -70,7 +70,7 @@ add_action('admin_head', 'misfit_admin_head');
 /* Admin Interface
 /*-----------------------------------------------------------------------------------*/
 $functions_path = THEME_ADMIN . '/';
-$themename = "Misfit";
+$themename = "Euro Capital Properties";
 function misfit_add_admin() {
 
     global $themename, $shortname, $query_string;
@@ -84,7 +84,7 @@ function misfit_add_admin() {
 		}
     }
 		
-    $tt_page = add_object_page($themename, $themename, 'administrator', 'misfit','misfit_options_page','../wp-content/themes/framework/options/images/icon_options.png');
+    $tt_page = add_object_page($themename, $themename, 'administrator', 'misfit','misfit_options_page','dashicons-admin-settings');
 
 	add_action("admin_print_scripts-$tt_page", 'of_load_only');
 	add_action("admin_print_styles-$tt_page",'of_style_only');
@@ -190,7 +190,7 @@ function misfit_options_page(){
 	    	
 	    	<center><img src="<?php echo get_template_directory_uri() ?>/options/images/littlehenry.png" style="width: 137px; margin-left: 0px; margin-top: -19px;" /></center>
 	   	 	<div class="theme_name">
-	   	 		<span style="margin-top: 5px; margin-right: 00px;">Misfit Frameworks<small> 1.3</span><strong style="margin: 10px 0;">Misfit Themes Framework 2.03</strong></small>
+	   	 		<span style="margin-top: 5px; margin-right: 00px;">Misfit Frameworks<small> 1.3</span><strong style="margin: 10px 0;">Euro Capital Properties</strong></small>
 	   	 		<input type="submit" value="Save All Changes" class="button-primary" style="float: right;" />
 	    
 	    	</div>
@@ -1525,6 +1525,11 @@ $options[] = array( "name" => __('Custom Favicon','misfitlang'),
 			"id" => $shortname."_custom_favicon",
 			"std" => "",
 			"type" => "upload");
+
+$options[] = array( "name" => __('Address','misfitlang'),
+			"id" => $shortname."_address",
+			"std" => "",
+			"type" => "text");
 						
 			
 $options[] = array( "name" => __('Email','misfitlang'),
@@ -1542,6 +1547,26 @@ $options[] = array( "name" => __('Custom CSS','misfitlang'),
 
 
 
+
+
+
+$options[] = array( "name" => __('Title for the text block under main slider on home page','misfitlang'),
+			"desc" => "",
+			"id" => $shortname."_homeheader",
+			"std" => "",
+			"type" => "text");
+			
+			
+$options[] = array( "name" => __('Text for the text block under main slider on home page','misfitlang'),
+			"desc" => "",
+			"id" => $shortname."_hometext",
+			"std" => "",
+			"type" => "textarea");
+
+
+
+
+
 $options[] = array( "name" => __('Tracking Code','misfitlang'),
 			"desc" => __('If you would like to add your tracking code into the footer, please put it here.','misfitlang'),
 			"id" => $shortname."_tracking_code",
@@ -1552,93 +1577,43 @@ $options[] = array( "name" => __('Tracking Code','misfitlang'),
 			
 			
 /* Option Page 2 - Sample Page */
-$options[] = array( "name" => __('Navigation Options','misfitlang'),
+$options[] = array( "name" => __('About ECP Section','misfitlang'),
 			"type" => "heading");
 
 
 
-$options[] = array( "name" => __('Newsletter Signup Code','misfitlang'),
-			"desc" => __('If you have a newsletter signup form code, paste it here','misfitlang'),
-			"id" => $shortname."_newscode",
+$options[] = array( "name" => __('Title','misfitlang'),
+			"desc" => __('Primary Title','misfitlang'),
+			"id" => $shortname."_tits",
+			"std" => "",
+			"type" => "text");
+
+
+$options[] = array( "name" => __('Quote','misfitlang'),
+			"desc" => __('Primary Quote','misfitlang'),
+			"id" => $shortname."_quote",
+			"std" => "",
+			"type" => "textarea");
+
+$options[] = array( "name" => __('Quote cite','misfitlang'),
+			"desc" => __('Who is the quote by?','misfitlang'),
+			"id" => $shortname."_quotecite",
+			"std" => "",
+			"type" => "text");
+
+$options[] = array( "name" => __('Paragraph Number one','misfitlang'),
+			"desc" => __('text block 1','misfitlang'),
+			"id" => $shortname."_text1",
 			"std" => "",
 			"type" => "textarea");
 
 
-
-$options[] = array( "name" => __('Deactivate First Tab (posts)','misfitlang'),
-			"desc" => __('By default, your posts fill the first tab. Deactivate it here.','misfitlang'),
-			"id" => $shortname."_removetabone",
+$options[] = array( "name" => __('Paragraph Number two','misfitlang'),
+			"desc" => __('text block 2','misfitlang'),
+			"id" => $shortname."_text2",
 			"std" => "",
-			"type" => "checkbox");	
+			"type" => "textarea");
 
-
-$options[] = array( "name" => __('First Tab Label','misfitlang'),
-			"desc" => "Customize the first Tab's label",
-			"id" => $shortname."_tabonelabel",
-			"std" => "",
-			"type" => "text");
-			
-
-$options[] = array( "name" => __('Deactivate Second Tab (portfolio)','misfitlang'),
-			"desc" => __('By default, your portfolio fill the second tab. Deactivate it here.','misfitlang'),
-			"id" => $shortname."_removetabtwo",
-			"std" => "true",
-			"type" => "checkbox");	
-
-
-$options[] = array( "name" => __('Second Tab Label','misfitlang'),
-			"desc" => "Customize the second Tab's label",
-			"id" => $shortname."_tabsecondlabel",
-			"std" => "",
-			"type" => "text");						
-
-
-$options[] = array( "name" => __('Activate Third Tab (products)','misfitlang'),
-			"desc" => __('By default, your products fill the second tab. Activate it here. Be sure to download woocommerce to get your products going','misfitlang'),
-			"id" => $shortname."_activatethree",
-			"std" => "false",
-			"type" => "checkbox");	
-
-
-$options[] = array( "name" => __('Third Tab Label','misfitlang'),
-			"desc" => "Customize the third Tab's label",
-			"id" => $shortname."_thirdtablabel",
-			"std" => "",
-			"type" => "text");				
-
-
-
-$options[] = array( "name" => __('Custom Fourth Tab','misfitlang'),
-			"desc" => __('Content and title on this page will be pulled and featured in this tab','misfitlang'),
-			"id" => $shortname."_fourthtab",
-			"std" => "",
-			"type" => "select",
-			"options" => $tt_pages);
-
-$options[] = array( "name" => __('Fourth Tab Label','misfitlang'),
-			"desc" => "Customize the fourth Tab's label",
-			"id" => $shortname."_fourthtablabel",
-			"std" => "",
-			"type" => "text");				
-
-
-$options[] = array( "name" => __('Activate Sidebar Ad Spot (a good size is 468 X 60)','misfitlang'),
-			"desc" => "Upload the ad and add a link below",
-			"id" => $shortname."_adspot1",
-			"std" => "",
-			"type" => "upload");	
-
-$options[] = array( "name" => __('Ad link','misfitlang'),
-			"desc" => "add an outbound link to the ad. ex: http://www.example.com",
-			"id" => $shortname."_adlink",
-			"std" => "",
-			"type" => "text");
-
-$options[] = array( "name" => __('Using Adwords? Paste Code','misfitlang'),
-			"desc" => "You can paste your adwords code here",
-			"id" => $shortname."_adcode",
-			"std" => "",
-			"type" => "textarea");												   
 
 						
 /* Option Page 2 - Sample Page */
@@ -1659,32 +1634,6 @@ $options[] = array( "name" => __('Twitter Username, without the "@" ex: misfit',
 			"type" => "text");
 
 
-$options[] = array( "name" => __('Twitter API Key','misfitlang'),
-			"desc" => "Twitter's recent API update requires new authentication. Therefore you will need your key, consumer secret, token and user secret to use the twitter feed. Learn how to get yours <a href=\"http://legend.misfit.co/twitter\" target=\"_blank\">here</a>",
-			"id" => $shortname."_consumer_key",
-			"std" => "",
-			"type" => "text");
-			
-
-$options[] = array( "name" => __('Twitter API Secret','misfitlang'),
-			"desc" => "Learn how to get yours <a href=\"http://legend.misfit.co/twitter\" target=\"_blank\">here</a>",
-			"id" => $shortname."_consumer_secret",
-			"std" => "",
-			"type" => "text");
-
-$options[] = array( "name" => __('Twitter Access Token','misfitlang'),
-			"desc" => "Learn how to get yours <a href=\"http://legend.misfit.co/twitter\" target=\"_blank\">here</a>",
-			"id" => $shortname."_access_token",
-			"std" => "",
-			"type" => "text");
-
-$options[] = array( "name" => __('Twitter Access Token Secret','misfitlang'),
-			"desc" => "Learn how to get yours <a href=\"http://legend.misfit.co/twitter\" target=\"_blank\">here</a>",
-			"id" => $shortname."_access_token_secret",
-			"std" => "",
-			"type" => "text");
-
-
 
 $options[] = array( "name" => __('Instagram Username','misfitlang'),
 			"desc" => "DO NOT USE HTTP://INSTAGRAM.COM, Create your instagram link with the ID: ex: misfitinc.",
@@ -1693,18 +1642,6 @@ $options[] = array( "name" => __('Instagram Username','misfitlang'),
 			"type" => "text");
 			
 					
-$options[] = array( "name" => __('Instagram user ID. Ex: 5532366','misfitlang'),
-			"desc" => "Activate Your Instagram Feed with your ID:  and a token (below). Click here to grab your userid and token: <a href=\"https://instagram.com/oauth/authorize/?client_id=467ede5a6b9b48ae8e03f4e2582aeeb3&redirect_uri=http://instafeedjs.com&response_type=token\" target=\"_blank\">here</a> or, Learn more about how to get one <a href=\"http://legend.misfit.co/instagram\" target=\"_blank\">here</a>: ",
-			"id" => $shortname."_instagramid",
-			"std" => "",
-			"type" => "text");
-			
-			
-$options[] = array( "name" => __('Instagram Access Token','misfitlang'),
-			"desc" => "Activate Your Instagram Feed with your token: ex: 5532366.99be448.fbef473efc0141dd99bdc4428a3a62ad. Click here to grab your userid and token: <a href=\"https://instagram.com/oauth/authorize/?client_id=467ede5a6b9b48ae8e03f4e2582aeeb3&redirect_uri=http://instafeedjs.com&response_type=token\" target=\"_blank\">here</a> or, Learn more about how to get one <a href=\"http://legend.misfit.co/instagram\" target=\"_blank\">here</a>: ",
-			"id" => $shortname."_instagramtok",
-			"std" => "",
-			"type" => "text");
 						
 $options[] = array( "name" => __('Dribbble Username','misfitlang'),
 			"desc" => "By entering your dribbble you activate the dribbble link and icon.",
@@ -1712,391 +1649,8 @@ $options[] = array( "name" => __('Dribbble Username','misfitlang'),
 			"std" => "",
 			"type" => "text");
 
-
-$options[] = array( "name" => __('Pinterest Username','misfitlang'),
-			"desc" => "By entering your pinterest you activate the pinterest link and icon.",
-			"id" => $shortname."_pinterest",
-			"std" => "",
-			"type" => "text");					
-					
-$options[] = array( "name" => __('Google plus Username','misfitlang'),
-			"desc" => "By entering your Google Plus you activate the google link and icon.",
-			"id" => $shortname."_googleplus",
-			"std" => "",
-			"type" => "text");
-					
-$options[] = array( "name" => __('Behance Username','misfitlang'),
-			"desc" => "By entering your Behance you activate the behance link and icon.",
-			"id" => $shortname."_behance",
-			"std" => "",
-			"type" => "text");					
-										
-					
-/* Option Page 2 - Sample Page */
-$options[] = array( "name" => __('Home Page','misfitlang'),
-			"type" => "heading");
-
-
-
-
-$options[] = array( "name" => __('Show Big Giant Sexy Featured section','misfitlang'),
-			"desc" => __('By default, the big featured section does not display. Activate it by checking the box to my left, then selecting your version and type options below','misfitlang'),
-			"id" => $shortname."_showfeatured",
-			"std" => "false",
-			"type" => "checkbox");	
-			
-$options[] = array( "name" => __('Show Posts, Products or Porfolio on Home Page','misfitlang'),
-			"desc" => __('By default, your recent posts display on the home, but you can make the home as you wish','misfitlang'),
-			"id" => $shortname."_homeposts",
-			"std" => "",
-			"type" => "select",
-			"options" => $homeoptions);						
-
-
-/*============================ LAYOUT TYPES ========================== */
-
-
-
-$options[] = array( "name" => __('Left Opening','misfitlang'),
-			"type" => "openleft");
-			
-
-
-			
-
-$options[] = array( "name" => __('Layout Types','misfitlang'),
-			"desc" => __('','misfitlang'),
-			"id" => $shortname."_hometype",
-			"std" => "",
-			"type" => "radio",
-			"options" => $pagetypes);
-			
-
-$options[] = array( "name" => __('Left Close','misfitlang'),
-			"type" => "closeleft");
-			
-			
-/*============================ / LAYOUT TYPES ========================== */
-
-
-
-
-
-
-
-
-
-
-/*============================ RIGHT SIDE OPEN  ========================== */
-
-
-
-$options[] = array( "name" => __('Right close','misfitlang'),
-			"type" => "openright");
-
-
-
-
-/*======= DEFAULT LAYOUT OPTIONS ========================== */
-
-$options[] = array( "name" => __('Single Image Default Layout','misfitlang'),
-			"std" => "hpcontent-1",
-			'id' => "hpradiocontent-1",
-			"type" => "opencontainer");	
-			
-
-$options[] = array( "name" => __('Single Image Upload','misfitlang'),
-			"desc" => __('Simple, but sexy one-image with fade in transitions','misfitlang'),
-			"id" => $shortname."_single_image",
-			"std" => "",
-			"type" => "upload");
-			
-$options[] = array( "name" => __('Line One','misfitlang'),
-			"desc" => "This line can be the full block of text. If you would like to insert size varying text, use the fields below. If empty, stays blank.",
-			"id" => $shortname."_single_lineone",
-			"std" => "",
-			"type" => "text");	
-
-$options[] = array( "name" => __('Smaller Text Line.','misfitlang'),
-			"desc" => "You can inject a size variation in your text block by adding it here. If empty, stays blank.",
-			"id" => $shortname."_single_smalline",
-			"std" => "",
-			"type" => "text");			
-			
-$options[] = array( "name" => __('Big Text Line','misfitlang'),
-			"desc" => "Good for single words, a big line can go here. If empty, stays blank.",
-			"id" => $shortname."_single_bigline",
-			"std" => "",
-			"type" => "text");				
-
-$options[] = array( "name" => __('Last Line','misfitlang'),
-			"desc" => "Optionally, you can add an addition bit of text to round things off here. If empty, stays blank.",
-			"id" => $shortname."_single_linetwo",
-			"std" => "",
-			"type" => "text");		
-			
-			
-
-
-			
-
-
-$options[] = array( "name" => __('Right close','misfitlang'),
-			"type" => "closecontainer");			
-
-
-
-
-/*======= SLIDER LAYOUT OPTIONS ========================== */
-
-
-
-$options[] = array( "name" => __('Slider Layout Option','misfitlang'),
-			"std" => "hpcontent-2",
-			'id' => "hpradiocontent-2",
-			"type" => "opencontainer");	
-			
-			
-
-
-$options[] = array( "name" => __('Slider Note','misfitlang'),
-			"id" => $shortname."_slidernote",
-			"std" => "In order to create the gallery for this, you will need to create a page and from within that page, create a gallery, insert it into the page and publish it. Use the dropdown below to then select that page. Hit save and hi-five someone.",
-			"type" => "info",
-			"options" => "");			
-
-
-$options[] = array( "name" => __('Page To Create','misfitlang'),
-			"desc" => __('Content and title on this page will be pulled and featured into the dashboard tab','misfitlang'),
-			"id" => $shortname."_sliderpage",
-			"std" => "",
-			"type" => "select",
-			"options" => $tt_pages);			
-			
-
-
-			
-
-$options[] = array( "name" => __('Big Image Gallery Transition','misfitlang'),
-			"desc" => __('If you would like a different transition, choose from below','misfitlang'),
-			"id" => $shortname."_slidertransitions",
-			"std" => "Fade",
-			"type" => "select",
-			"options" => $transitions);
-			
-
-$options[] = array( "name" => __('Line One','misfitlang'),
-			"desc" => "This line can be the full block of text. If you would like to insert size varying text, use the fields below. If empty, stays blank.",
-			"id" => $shortname."_slide_lineone",
-			"std" => "",
-			"type" => "text");	
-
-$options[] = array( "name" => __('Smaller Text Line.','misfitlang'),
-			"desc" => "You can inject a size variation in your text block by adding it here. If empty, stays blank.",
-			"id" => $shortname."_slide_smalline",
-			"std" => "",
-			"type" => "text");			
-			
-$options[] = array( "name" => __('Big Text Line','misfitlang'),
-			"desc" => "Good for single words, a big line can go here. If empty, stays blank.",
-			"id" => $shortname."_slide_bigline",
-			"std" => "",
-			"type" => "text");				
-
-$options[] = array( "name" => __('Last Line','misfitlang'),
-			"desc" => "Optionally, you can add an addition bit of text to round things off here. If empty, stays blank.",
-			"id" => $shortname."_slide_linetwo",
-			"std" => "",
-			"type" => "text");	
-
-
-$options[] = array( "name" => __('Right close','misfitlang'),
-			"type" => "closecontainer");	
-			
-
-
-
-
-
-
-
-
-
-
-/*======= VIDEO LAYOUT OPTIONS ========================== */
-			
-			
-$options[] = array( "name" => __('Line Three','misfitlang'),
-			"std" => "hpcontent-3",
-			'id' => "hpradiocontent-3",
-			"type" => "opencontainer");	
-			
 	
-$options[] = array( "name" => __('Video Note','misfitlang'),
-			"id" => $shortname."_videpnote",
-			"std" => "Video is weird. Video compression is weird. Web-based video is weird. So, be aware that file size DOES effect performance. Try to get your MB down as much as possible as some servers do not allow uploads above 2MB. Please take a look <a href=\"http://www.wpbeginner.com/wp-tutorials/how-to-increase-the-maximum-file-upload-size-in-wordpress//\" target=\"_blank\">here</a> for information on increasing file limits. Here is a <a href=\"http://video.online-convert.com/\" target=\"_blank\">good site</a> to convert and compress video online",
-			"type" => "info",
-			"options" => "");	
 
-$options[] = array( "name" => __('MP4 or WebM Video Upload','misfitlang'),
-			"desc" => __('Simple, but sexy one-image with fade in transitions','misfitlang'),
-			"id" => $shortname."_mp4",
-			"std" => "",
-			"type" => "upload");
-
-$options[] = array( "name" => __('OGG Video Upload (for firefox browser)','misfitlang'),
-			"desc" => __('Simple, but sexy one-image with fade in transitions','misfitlang'),
-			"id" => $shortname."_ogg",
-			"std" => "",
-			"type" => "upload");
-
-
-$options[] = array( "name" => __('Ambient Audio','misfitlang'),
-			"desc" => __('By default, video is ambient, meaning no sound. If you would like to play sound with an option to mute, check this box','misfitlang'),
-			"id" => $shortname."_ambient",
-			"std" => "true",
-			"type" => "checkbox");			
-
-
-
-
-$options[] = array( "name" => __('Image fallback','misfitlang'),
-			"desc" => __('Simple, but sexy one-image with fade in transitions','misfitlang'),
-			"id" => $shortname."_vidfallback",
-			"std" => "",
-			"type" => "upload");						
-
-
-
-
-$options[] = array( "name" => __('Line One','misfitlang'),
-			"desc" => "This line can be the full block of text. If you would like to insert size varying text, use the fields below. If empty, stays blank.",
-			"id" => $shortname."_vid_lineone",
-			"std" => "",
-			"type" => "text");	
-
-$options[] = array( "name" => __('Smaller Text Line.','misfitlang'),
-			"desc" => "You can inject a size variation in your text block by adding it here. If empty, stays blank.",
-			"id" => $shortname."_vid_smalline",
-			"std" => "",
-			"type" => "text");			
-			
-$options[] = array( "name" => __('Big Text Line','misfitlang'),
-			"desc" => "Good for single words, a big line can go here. If empty, stays blank.",
-			"id" => $shortname."_vid_bigline",
-			"std" => "",
-			"type" => "text");				
-
-$options[] = array( "name" => __('Last Line','misfitlang'),
-			"desc" => "Optionally, you can add an addition bit of text to round things off here. If empty, stays blank.",
-			"id" => $shortname."_vid_linetwo",
-			"std" => "",
-			"type" => "text");	
-
-
-
-			
-
-$options[] = array( "name" => __('Right close','misfitlang'),
-			"type" => "closecontainer");	
-			
-						
-			
-			
-			
-					
-			
-$options[] = array( "name" => __('Right','misfitlang'),
-			"type" => "closeright");
-
-/*============================ / RIGHT SIDE OPEN  ========================== */
-
-
-			
-						
-
-/* Option Page 2 - Sample Page */
-$options[] = array( "name" => __('Email Newsletters','misfitlang'),
-			"type" => "heading");			
-
-$options[] = array( "name" => __('Basic Email Newsletter Code','misfitlang'),
-		"desc" => "This code will generate an Email Newsletter that you can edit, copy and paste into any mail service and start sending out emails to your peeps. Learn more about this newsletter feature, <a href=\"http://legend.misfit.co/newsletter\" target=\"_blank\">click here</a>",
-		"id" => $shortname."_newsletter",
-		"std" => $newsletter_code,
-		"type" => "codeblockthree");
-		
-$options[] = array( "name" => __('Show Page Template as Heading','misfitlang'),
-		"desc" => "If you would like to use the page template as the header for the newsletter, please check here.",
-		"id" => $shortname."_heading",
-		"std" => "true",
-		"type" => "checkbox");
-	
-$options[] = array( "name" => __('Show Recent Projects','misfitlang'),
-		"desc" => "If you would like your 3 most recent projects to display on your newsletter, please check here",
-		"id" => $shortname."_recentprojects",
-		"std" => "true",
-		"type" => "checkbox");
-
-$options[] = array( "name" => __('Portfolio Heading','misfitlang'),
-			"desc" => "Override Portfolio heading text",
-			"id" => $shortname."_portfolioheader",
-			"std" => "",
-			"type" => "text");		
-
-
-
-$options[] = array( "name" => __('Show Featured Product','misfitlang'),
-		"desc" => "If you would like to show your featured products, check true. Be sure to mark the product as 'Featured' ",
-		"id" => $shortname."_featprod",
-		"std" => "false",
-		"type" => "checkbox");
-		
-		
-$options[] = array( "name" => __('Featured Product','misfitlang'),
-			"desc" => "Override Product section heading text",
-			"id" => $shortname."_prodheader",
-			"std" => "",
-			"type" => "text");		
-			
-			
-$options[] = array( "name" => __('Number of Featured Products to Display','misfitlang'),  
-		"desc" => "Choose How Many Blog Posts will be displayed, up to 10.",  
-		"id" => $shortname."_prodpostcount",  
-		"type" => "select",  
-		"std" => "3",
-		"options" => array("1", "2", "3", "4", "5","6", "7", "8","9","10"));			
-
-
-
-
-			
-		
-$options[] = array( "name" => __('Show Recent Blog Posts','misfitlang'),
-		"desc" => "If you would show your recent blog posts on your newsletter, please check here",
-		"id" => $shortname."_recentposts",
-		"std" => "true",
-		"type" => "checkbox");
-		
-		
-$options[] = array( "name" => __('Blog Heading','misfitlang'),
-			"desc" => "Override Blog section heading text",
-			"id" => $shortname."_blogheader",
-			"std" => "",
-			"type" => "text");		
-			
-			
-$options[] = array( "name" => __('Number of Blog Posts to Display','misfitlang'),  
-		"desc" => "Choose How Many Blog Posts will be displayed, up to 10.",  
-		"id" => $shortname."_newsletterpostcount",  
-		"type" => "select",  
-		"std" => "3",
-		"options" => array("1", "2", "3", "4", "5","6", "7", "8","9","10"));
-	
-$options[] = array( "name" => __('Mailchimp RSS Email Newsletter Code','misfitlang'),
-		"desc" => "This code will generate an Email Newsletter that you can edit, copy and paste into Mailchimp and start sending out emails to your peeps. Learn more about this newsletter feature, <a href=\"http://legend.misfit.co/newsletter\" target=\"_blank\">click here</a>",
-		"id" => $shortname."_mailchimp",
-		"std" => $mailchimp_code,
-		"type" => "codeblocktwo");
 
 
 
