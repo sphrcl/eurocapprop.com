@@ -153,29 +153,101 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 
 
 /* Base Styles -----------------------------------------------------------*/
+.container {
+	position: relative;
+	max-width: 1165px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.clear { clear: both; }
+
+
+
+/* NAVIGATION =================================== */
 .navigation {
 	border-bottom: 1px solid #e0e0e0;
-	position: relative;
-	height: 100px;
+	height: 93px;
 	width: 100%;
 }
 
 .logo { 
-	padding: 6px 0 0 60px;
+	padding: 0 60px;
 	float: left; 
 }
 
 .menu { 
-	padding: 40px 250px 0 0;
+	padding: 40px 230px 0 0;
 	float: right; 
 }
 
 .menu ul li { 
-	text-transform: uppercase;
-	padding: 0px 7px;
+	padding: 0px 8px;
 	display: inline; 
+}
+
+.menu ul li a {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #292929;
 }
 
 
 
+/* FOOTER =================================== */
+.footer {
+	border-top: 1px solid #ad8a16;
+	background-color: #f9f9f9;
+	position: relative;
+	margin-top: 80px;
+	height: 150px;
+}
+
+.tel-fax-footer, 
+.address-footer {
+	text-transform: uppercase;
+	position: absolute;
+	top: 65px;
+}
+
+.tel-fax-footer span { margin-left: 30px; }
+.tel-fax-footer { left: 90px; }
+.address-footer { right: 90px; }
+
+
+
 /* CONTACT PAGE -----------------------------------------------------------*/
+.contact-container {
+	position: relative;
+	width: 100%;
+}
+
+.contact-container h2 {
+	padding: 120px 0 50px 0;
+}
+
+.map-container {
+	background-color: #292929;
+	height: 500px;
+	width: 100%;
+	margin-top: 115px;
+}
+
+.address,
+.tel-fax,
+.email {
+	position: absolute;
+}
+
+.address {
+
+}
+
+.tel-fax {
+	left: 500px;
+}
+
+.email {
+	top: 235px;
+	right: 0;
+}
