@@ -160,6 +160,10 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 	width: 100%;
 }
 
+.container h1 {
+	padding: 120px 0 50px 0;
+}
+
 .clear { clear: both; }
 
 
@@ -216,21 +220,48 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 
 
 
+/* NEWS & PRESS PAGE -----------------------------------------------------------*/
+.press-container {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 28px 28px 0;
+	position: relative;
+	display: table;
+	height: 300px;
+	width: 360px;
+	float: left;
+}
+
+.press-container a:hover { background-color: rgba(0,0,0,0); }
+.press-container a {
+	background-color: rgba(0,0,0,0.8);
+	vertical-align: middle;
+	display: table-cell;
+	text-align: center;
+	color: #fff;
+
+
+
+	transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-webkit-transition: all 0.4s ease 0s;
+}
+
+
+
 /* CONTACT PAGE -----------------------------------------------------------*/
 .contact-container {
 	position: relative;
 	width: 100%;
 }
 
-.contact-container h2 {
-	padding: 120px 0 50px 0;
-}
-
 .map-container {
 	background-color: #292929;
+	margin-top: 115px;
 	height: 500px;
 	width: 100%;
-	margin-top: 115px;
 }
 
 .address,
