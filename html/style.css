@@ -162,10 +162,21 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 
 .container h1 {
 	padding: 120px 0 50px 0;
+	font-size: 40px;
+	color: #757575;
+}
+
+.active {
+	border-bottom: 1px solid #292929;
+	padding-bottom: 5px;
 }
 
 .clear { clear: both; }
 
+p {	
+	color: #b6b6b6; 
+	font-size: 14px;
+}
 
 
 /* NAVIGATION =================================== */
@@ -200,12 +211,14 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 
 /* FOOTER =================================== */
 .footer {
-	border-top: 1px solid #ad8a16;
+	border-top: 1px solid #e0e0e0;
 	background-color: #f9f9f9;
 	position: relative;
 	margin-top: 80px;
-	height: 150px;
+	height: 170px;
 }
+
+.footer p { color: #292929; }
 
 .tel-fax-footer, 
 .address-footer {
@@ -214,7 +227,15 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 	top: 65px;
 }
 
-.tel-fax-footer span { margin-left: 30px; }
+.tel-fax-footer .fax-space { 
+	margin-left: 30px; 
+}
+
+.tel-fax-footer .tel-label,
+.tel-fax-footer .fax-label { 
+	color: #757575; 
+}
+
 .tel-fax-footer { left: 90px; }
 .address-footer { right: 90px; }
 
@@ -225,21 +246,34 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin: 0 28px 28px 0;
+	margin: 0 27px 28px 0;
 	position: relative;
 	display: table;
-	height: 300px;
-	width: 360px;
+	height: 280px;
+	width: 370px;
 	float: left;
+}
+
+.press-container:hover .press-see-photos { display: block; }
+
+.press-container:hover a:after { display: block; }
+.press-container a:after {
+	background: url(images/arrow.png) no-repeat;
+	position: absolute;
+	display: none;
+	right: 16px;
+	bottom: 12px;
+	height: 20px;
+	width: 20px;
+	content: '';
 }
 
 .press-container a:hover { background-color: rgba(0,0,0,0); }
 .press-container a {
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.6);
 	vertical-align: middle;
 	display: table-cell;
 	text-align: center;
-	color: #fff;
 
 
 
@@ -247,6 +281,33 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 	-o-transition: all 0.4s ease 0s;
 	-moz-transition: all 0.4s ease 0s;
 	-webkit-transition: all 0.4s ease 0s;
+}
+
+.press-container a p {
+	text-transform: uppercase;
+	line-height: 1.8;
+	font-size: 16px;
+	color: #fff;
+	padding: 0;
+}
+
+.press-container.no-margin { margin-right: 0; }
+
+.press-date {
+	position: absolute;
+	font-size: 12px;
+	bottom: 15px;
+	color: #fff;
+	left: 15px;
+}
+
+.press-see-photos {
+	position: absolute;
+	font-size: 12px;
+	display: none;
+	bottom: 15px;
+	color: #fff;
+	right: 47px;
 }
 
 
@@ -257,11 +318,19 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 	width: 100%;
 }
 
+.contact-container h1 + p { color: #7d7d7d; }
+
 .map-container {
 	background-color: #292929;
 	margin-top: 115px;
 	height: 500px;
 	width: 100%;
+}
+
+.map-container h1 {
+	text-align: center;
+	font-size: 35px;
+	color: #fff;
 }
 
 .address,
@@ -279,6 +348,6 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 }
 
 .email {
-	top: 235px;
+	top: 255px;
 	right: 0;
 }
