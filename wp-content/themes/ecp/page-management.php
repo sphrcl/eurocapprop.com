@@ -1,6 +1,6 @@
 <?php 
 
-/* Template name: Leadership */
+/* Template name: Management */
 get_header(); 
 
 ?>
@@ -13,44 +13,44 @@ get_header();
 
 	<div class="container">	
 
-		<h2><?php the_title(); ?></h2>
+		<h2 class="title"><?php the_title(); ?></h2>
 
-		<?php
-			$query_leadership = new wp_query(array(
-				'post_type' => 'leadership',
-				'posts_per_page' => 1
-			)); 
-			if($query_leadership->have_posts()) {
-		?>
+		<div class="top-person">
+	
+			<div id="owl1" class="right owl-carousel owl-theme">
 
-			<div class="top-person">
-
-				<?php
-					while($query_leadership->have_posts()) : $query_leadership->the_post();
-					$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
+				<?php 
+					$galleryImages = get_post_gallery_imagess(); 
+					$imagesCount = count($galleryImages);
 				?>
-				
-					<div class="left" style="background-image: url(<?php echo tt($imgsrc[0],580,550); ?>);"></div>
+			           
+	    		<?php if ($imagesCount > 0) : ?>
+	          	<?php for ($i = 0; $i < $imagesCount; $i++): ?>
+	            <?php if (!empty($galleryImages[$i])) :?>
 
-					<div class="right">
-						
-						<h3><?php echo get_post_meta($post->ID,'misfit_title_position',true); ?></h3>
-						<h4><?php the_title(); ?></h4>
-						<?php the_content(); ?>
-
-					</div>
+					<div class="item" style="background-image: url(<?php echo tt($galleryImages[$i]['full'][0],580,550); ?>);"></div>
 				
-				<?php $count++; endwhile; ?>
+				<?php endif; ?>
+				<?php endfor; ?>
+				<?php endif; ?>
 
 			</div>
 
-		<?php } wp_reset_query(); ?>
+			<div class="left">
+				
+				<h3><?php echo get_post_meta($post->ID,'misfit_subtit',true); ?></h3>
+				<?php the_content(); ?>
+				<a class="read-more-management"></a>
 
-		<h2>Leadership Team</h2>
+			</div>
+			
+		</div>
+
+		<h2>Management Team</h2>
 
 		<?php
 			$query_leadership_team = new wp_query(array(
-				'post_type' => 'leadership',
+				'post_type' => 'management',
 				'posts_per_page' => -1,
 				'offset_per_page' => 1,
 			)); 

@@ -25,7 +25,8 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 
-		var owl = $("#owl")
+		var owl = $("#owl"),
+			owl1 = $('#owl1')
 
 		owl.owlCarousel({
 			itemsDesktop : [1000,1], //5 items between 1000px and 901px
@@ -44,6 +45,16 @@
 		$(".prev").click(function(){
 			owl.trigger('owl.prev');
 		})
+
+		owl1.owlCarousel({
+			itemsDesktop : [1000,1], //5 items between 1000px and 901px
+			itemsDesktopSmall : [900,1], // betweem 900px and 601px
+			itemsTablet: [600,1], //2 items between 600 and 0
+			itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+			pagination: true,
+			singleItem : true,
+			responsive: true,
+		});
 
 	});
 </script>

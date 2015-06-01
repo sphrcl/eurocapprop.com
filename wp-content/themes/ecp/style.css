@@ -182,7 +182,8 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 .page-slider .controls div,
 .menu li a,
 .person-description .right,
-.press-container a {
+.press-container a,
+.close-button {
 	transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -518,7 +519,7 @@ ul.topnavigation li a:hover {
 }
 
 .home .menu li:last-child {
-  margin-right: 10px;
+  margin-right: 0;
 }
 
 .home .menu a {
@@ -622,7 +623,7 @@ ul.topnavigation li a:hover {
 .container h2.title {
     color: #757575;
     font-size: 40px;
-    padding: 120px 0 50px;
+    padding: 30px 0 50px;
 }
 
 .container .content {
@@ -652,17 +653,21 @@ ul.topnavigation li a:hover {
 
 
 
-/* PAGE - Leadership and Management ################################################################################################ */
+/* PAGE - Leadership ################################################################################################ */
 
 .page-template-page-leadership h2 {
-    color: #b6b6b6;
+    color: #757575;
     font-size: 36px;
     margin-bottom: 40px;
 }
 
 .top-person {
 	overflow: hidden;
-	margin-bottom: 60px;
+	margin-bottom: 70px;
+}
+
+.top-person .gallerybanner {
+	display: none;
 }
 
 .top-person .left {
@@ -673,12 +678,16 @@ ul.topnavigation li a:hover {
     width: 48%;
 }
 
-.team li:first-child {
-    display: none;
-}
-
 .top-person .right {
 	width: 48%;
+}
+
+.top-person .right.owl-carousel {
+	height: 300px;
+}
+
+.top-person .right.owl-carousel .owl-item .item {
+	height: 300px;
 }
 
 .top-person .right h3 {
@@ -694,6 +703,7 @@ ul.topnavigation li a:hover {
 
 .team {
 	text-align:center;
+	position: relative;
 }
 
 .team > li {
@@ -701,6 +711,7 @@ ul.topnavigation li a:hover {
 	margin-right:1.5%;
 	text-align:left;
 	width:32%;
+	position: relative;
 }
 
 .team > li:last-child {
@@ -723,13 +734,14 @@ ul.topnavigation li a:hover {
 }
 
 .team li h3 {
-	color:#545454;
+	color: #333;
 	margin-bottom: 5px;
 }
 
 .team li h4 {
     font-size: 14px;
     margin-bottom: 10px;
+    color: #999;
 }
 
 .team .person-description p {
@@ -750,6 +762,101 @@ ul.topnavigation li a:hover {
 		opacity: 1;
 	}
 
+.team li > div.person-wrapper, .team > li.open-details > div.person-wrapper {
+	background: #fff none repeat scroll 0 0;
+	border-bottom: 1px solid #b5b5b5;
+	border-top: 1px solid #b5b5b5;
+	height: auto;
+	left: 0;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding: 50px 60px;
+	position: absolute;
+	top: 0;
+	width: 1080px;
+	z-index: 99;
+}
+
+.person-wrapper .person-details > div.person-lightbox-image {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 310px;
+    width: 43%;
+    float: left;
+}
+
+.person-wrapper .person-details .right {
+    width: 53%;
+}
+
+.team .person-wrapper h4 {
+    margin-bottom: 25px;
+}
+
+.close-button {
+	background: rgba(0, 0, 0, 0) url("images/close-button.png") no-repeat scroll 0 0 / cover ;
+	cursor: pointer;
+	height: 14px;
+	opacity: 0.5;
+	position: absolute;
+	right: 10px;
+	top: 50px;
+	width: 14px;
+}
+	.close-button:hover {
+		opacity: 1;
+	}
+
+/* Person lightbox */
+
+.open-detail {
+	cursor: pointer;
+}
+
+.team > li.open-details {
+    background: #fff none repeat scroll 0 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.team > li.open-details > div {
+	background: none transparent;
+}
+
+.team > li.open-details > .right {
+	display: none;
+}
+
+
+
+/* PAGE - Management ################################################################################################ */
+
+.page-template-page-management .top-person h3 {
+    color: #555;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.top-person .owl-theme .owl-controls {
+	margin-top: -30px;
+}
+
+.top-person .owl-theme .owl-controls .owl-page span {
+	background: #000 none repeat scroll 0 0;
+}
+
+.page-template-page-management .top-person .left {
+	height: auto;
+}
+
+.page-template-page-management .owl-pagination {
+    padding-right: 10px;
+    text-align: right;
+}
 
 
 /* CONTACT PAGE ################################################################################################ */
