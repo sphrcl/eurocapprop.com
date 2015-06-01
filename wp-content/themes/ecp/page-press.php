@@ -1,6 +1,6 @@
 <?php 
 
-/* Template name: Contact */
+/* Template name: Press */
 get_header(); 
 
 ?>
@@ -13,9 +13,7 @@ get_header();
 			<?php
 
 				$query_press = new WP_Query(array(
-					'post__not_in' => array($post->ID),
-					'category__in' => $cat_ID,
-					'posts_per_page' => 1	
+					'post_type' => 'press',
 				));
 
 				if($query_press->have_posts()) : while($query_press->have_posts()) : $query_press->the_post(); 
@@ -23,11 +21,11 @@ get_header();
 
 			?>
 
-				<div class="press-container" style="background-image: url(images/press3.jpg);">
+				<div class="press-container" style="background-image: url(<?php echo tt($imgsrc[0],370,280); ?>);">
 
 					<a href="<?php get_post_meta($post->ID,'misfit_press_link',true); ?>">
 						<p><?php the_content(); ?></p>
-						<span class="press-date"><?php the_date('M d, Y'); ?></span>
+						<span class="press-date"><?php the_date('F j, Y'); ?></span>
 						<!-- <span class="press-see-photos">See photos</span> -->
 					</a>
 

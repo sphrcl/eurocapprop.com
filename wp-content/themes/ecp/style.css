@@ -181,7 +181,8 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 .lining .fa.fa-close,
 .page-slider .controls div,
 .menu li a,
-.person-description .right {
+.person-description .right,
+.press-container a {
 	transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -465,6 +466,11 @@ ul.topnavigation li a:hover {
     top: 50%;
 }
 
+.menu li {
+    float: left;
+    margin-right: 20px;
+}
+
 .menu li a {
     color: #292929;
     text-transform: uppercase;
@@ -503,13 +509,20 @@ ul.topnavigation li a:hover {
     text-transform: uppercase;
     top: 58%;
     width: 100%;
+    margin-right: -10px;
+}
+
+.home .menu li {
+    display: inline-block;
+    float: none;
+    text-align: center;
 }
 
 .home .menu a {
     color: #000;
     font-weight: bold;
 }
-	.home .menu a:hover {
+	.home .menu a:hover, .menu a:hover {
 		color: #b18933;
 	}
 
@@ -765,6 +778,73 @@ ul.topnavigation li a:hover {
 
 .map-container iframe {
     width: 100%;
+}
+
+
+
+/* PAGE - NEWS & PRESS PAGE -----------------------------------------------------------*/
+
+.press-container {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 27px 28px 0;
+  position: relative;
+  display: table;
+  height: 280px;
+  width: 370px;
+  float: left;
+}
+
+.press-container:hover .press-see-photos { display: block; }
+
+.press-container:hover a:after { display: block; }
+
+.press-container a:after {
+  background: url(images/arrow.png) no-repeat;
+  position: absolute;
+  display: none;
+  right: 16px;
+  bottom: 12px;
+  height: 20px;
+  width: 20px;
+  content: '';
+}
+
+.press-container a:hover { background-color: rgba(0,0,0,0); }
+
+.press-container a {
+  background-color: rgba(0,0,0,0.6);
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+.press-container a p {
+  text-transform: uppercase;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #fff;
+  padding: 0;
+}
+
+.press-container.no-margin { margin-right: 0; }
+
+.press-date {
+  position: absolute;
+  font-size: 12px;
+  bottom: 15px;
+  color: #fff;
+  left: 15px;
+}
+
+.press-see-photos {
+  position: absolute;
+  font-size: 12px;
+  display: none;
+  bottom: 15px;
+  color: #fff;
+  right: 47px;
 }
 
 
