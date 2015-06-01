@@ -603,6 +603,12 @@ ul.topnavigation li a:hover {
     padding-bottom: 70px;
 }
 
+.container h2.title {
+    color: #757575;
+    font-size: 40px;
+    padding: 120px 0 50px;
+}
+
 .container .content {
     margin: 0 auto;
     width: 50%;
@@ -727,6 +733,39 @@ ul.topnavigation li a:hover {
 	.person-description .right:hover {
 		opacity: 1;
 	}
+
+
+
+/* CONTACT PAGE ################################################################################################ */
+
+.contact-container {
+	position: relative;
+	width: 100%;
+}
+
+.contact-container h1 + p { color: #7d7d7d; }
+
+.map-container {
+	margin-top: 115px;
+	width: 100%;
+}
+
+.contact-container .address, .contact-container .tel-fax, .contact-container .email {
+	position: absolute;
+}
+
+.contact-container .tel-fax {
+	left: 500px;
+}
+
+.contact-container .email {
+	top: 255px;
+	right: 0;
+}
+
+.map-container iframe {
+    width: 100%;
+}
 
 
 
@@ -2808,3 +2847,6 @@ width: 570px;
 .lightbox {
 	z-index: 999999 !important;
 }
+
+
+
