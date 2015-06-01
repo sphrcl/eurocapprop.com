@@ -509,13 +509,16 @@ ul.topnavigation li a:hover {
     text-transform: uppercase;
     top: 58%;
     width: 100%;
-    margin-right: -10px;
 }
 
 .home .menu li {
     display: inline-block;
     float: none;
     text-align: center;
+}
+
+.home .menu li:last-child {
+  margin-right: 10px;
 }
 
 .home .menu a {
