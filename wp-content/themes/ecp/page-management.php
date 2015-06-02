@@ -51,8 +51,6 @@ get_header();
 		<?php
 			$query_leadership_team = new wp_query(array(
 				'post_type' => 'management',
-				'posts_per_page' => -1,
-				'offset_per_page' => 1,
 			)); 
 
 			if($query_leadership_team->have_posts()) {

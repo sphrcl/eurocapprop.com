@@ -115,6 +115,34 @@ function developments_items()
 
 
 
+create_development_taxonomies();
+function create_development_taxonomies() {
+
+  $labels = array(
+    'name' => _x( 'Development Type', 'taxonomy general name' ),
+    'singular_name' => _x( 'Development Type', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Development Types' ),
+    'all_items' => __( 'All Development Types' ),
+    'parent_item' => __( 'Parent Development Type' ),
+    'parent_item_colon' => __( 'Parent Development Type:' ),
+    'edit_item' => __( 'Edit Development Type' ),
+    'update_item' => __( 'Update Development Type' ),
+    'add_new_item' => __( 'Add New Development Type' ),
+    'new_item_name' => __( 'New Development Type Name' ),
+  ); 	
+
+  register_taxonomy('type', array('development'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'development-type' ),
+  ));
+
+}
+
+
+
 add_action('init', 'leadership_items');
 function leadership_items()
 {
