@@ -892,6 +892,39 @@ ul.topnavigation li a:hover {
 
 
 
+/* PAGE - Development ################################################################################################ */
+
+.development-divider {
+	margin-bottom: 40px;
+}
+
+.development-divider > h2 {
+    margin-bottom: 30px;
+}
+
+.development-divider .owl-carousel .item {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 240px;
+}
+
+.development-divider .owl-carousel .owl-controls {
+	margin-top: -30px;
+	padding-right: 10px;
+	text-align: right;
+}
+
+.page-template-page-development-php .person-description .left {
+	width: 100%;
+}
+
+.page-template-page-development-php .gallerybanner {
+	display: none;
+}
+
+
+
 /* PAGE - NEWS & PRESS PAGE -----------------------------------------------------------*/
 
 .press-container {

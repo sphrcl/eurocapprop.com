@@ -131,7 +131,7 @@ function create_development_taxonomies() {
     'new_item_name' => __( 'New Development Type Name' ),
   ); 	
 
-  register_taxonomy('type', array('development'), array(
+  register_taxonomy('development-type', array('development'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,

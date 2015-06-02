@@ -27,24 +27,30 @@ get_header();
 			<h2>Properties | US</h2>
 
 			<?php
-				$query_leadership_team = new wp_query(array(
+				$query_development_us = new wp_query(array(
 					'post_type' => 'development',
-					'development-type' => 'us'
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'development-type',
+							'field'    => 'slug',
+							'terms'    => 'us',
+						),
+					),
 				)); 
 
-				if($query_leadership_team->have_posts()) {
+				if($query_development_us->have_posts()) {
 			?>
 
 				<ul class="team">
 
 					<?php
-						while($query_leadership_team->have_posts()) : $query_leadership_team->the_post();
+						while($query_development_us->have_posts()) : $query_development_us->the_post();
 						$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
 					?>
 					
 						<li>
 							
-							<div id="owl1" class="right owl-carousel owl-theme">
+							<div class="right dev-slider owl-carousel owl-theme">
 
 								<?php 
 									$galleryImages = get_post_gallery_imagess(); 
@@ -64,10 +70,9 @@ get_header();
 							</div>
 
 							<h3><?php the_title(); ?></h3>
-							<h4><?php echo get_post_meta($post->ID,'misfit_title_position',true); ?></h4>
+							<h4><?php echo get_post_meta($post->ID,'misfit_location',true); ?></h4>
 							<div class="person-description">
-								<div class="left"><?php echo excerpt(20); ?></div>
-								<a class="open-detail"><img class="right" src="<?php bloginfo('template_url'); ?>/images/right-arrow.png"></a>
+								<div class="left"><?php the_content(); ?></div>
 							</div>
 
 						</li>
@@ -85,24 +90,30 @@ get_header();
 			<h2>Properties | International</h2>
 
 			<?php
-				$query_leadership_team = new wp_query(array(
+				$query_development_international = new wp_query(array(
 					'post_type' => 'development',
-					'development-type' => 'international'
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'development-type',
+							'field'    => 'slug',
+							'terms'    => 'international',
+						),
+					),
 				)); 
 
-				if($query_leadership_team->have_posts()) {
+				if($query_development_international->have_posts()) {
 			?>
 
 				<ul class="team">
 
 					<?php
-						while($query_leadership_team->have_posts()) : $query_leadership_team->the_post();
+						while($query_development_international->have_posts()) : $query_development_international->the_post();
 						$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
 					?>
 					
 						<li>
 							
-							<div id="owl1" class="right owl-carousel owl-theme">
+							<div class="right dev-slider owl-carousel owl-theme">
 
 								<?php 
 									$galleryImages = get_post_gallery_imagess(); 
@@ -122,10 +133,9 @@ get_header();
 							</div>
 
 							<h3><?php the_title(); ?></h3>
-							<h4><?php echo get_post_meta($post->ID,'misfit_title_position',true); ?></h4>
+							<h4><?php echo get_post_meta($post->ID,'misfit_location',true); ?></h4>
 							<div class="person-description">
-								<div class="left"><?php echo excerpt(20); ?></div>
-								<a class="open-detail"><img class="right" src="<?php bloginfo('template_url'); ?>/images/right-arrow.png"></a>
+								<div class="left"><?php the_content(); ?></div>
 							</div>
 
 						</li>

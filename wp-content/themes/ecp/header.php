@@ -69,7 +69,10 @@
 			<div class="logo">
 				<a href="<?php bloginfo ('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/ecp-logo.png" alt="The Water Gate Hotel"></a>
 			</div>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ,  'container' => false, 'items_wrap' => '%3$s' ) ); ?>
+
+			<ul class="menu">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ,  'container' => false, 'items_wrap' => '%3$s' ) ); ?>
+			</ul>
 		</div>
 
 	</div>
