@@ -70,7 +70,7 @@ get_header();
 				
 						<li>
 							
-							<div style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"></div>
+							<div class="photo" style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"></div>
 							<h3><?php the_title(); ?></h3>
 							<h4><?php echo get_post_meta($post->ID,'misfit_title_position',true); ?></h4>
 							<div class="person-description">

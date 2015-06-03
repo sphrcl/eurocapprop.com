@@ -101,10 +101,12 @@ a {
 	-moz-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
+	text-decoration: underline;
 }
 
 a:hover {
-  color: #b18933;
+	color: #b18933;
+	text-decoration: none;
 }
 
 article blockquote {
@@ -476,6 +478,7 @@ ul.topnavigation li a:hover {
 .menu li a {
     color: #292929;
     text-transform: uppercase;
+    text-decoration: none;
 }
 	.menu li a:hover {
 		color: #b18933;
@@ -830,8 +833,10 @@ ul.topnavigation li a:hover {
     z-index: 9;
 }
 
-.team > li.open-details > div {
+.team > li.open-details > div.photo, .team > li.open-details > h3, .team > li.open-details > h4 {
 	background: none transparent;
+	visibility: hidden;
+	opacity: 0;
 }
 
 .team > li.open-details > .right {
