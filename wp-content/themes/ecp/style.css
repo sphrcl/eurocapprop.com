@@ -753,6 +753,8 @@ ul.topnavigation li a:hover {
 }
 
 .person-description .left {
+    overflow: hidden;  
+    height: 4.6em;
     width: 75%;
 }
 
