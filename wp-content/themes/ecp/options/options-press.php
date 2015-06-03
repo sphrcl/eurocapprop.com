@@ -34,9 +34,9 @@ $prefix = 'misfit';
 $numbers = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9+');
 $pagetypes = array('Basic No Feature', 'Scrolling Feature', 'Full Screen Feature', 'Colored Background Area');
 
-$development_management_box = array(
+$press_box = array(
 	'id' => 'CUSTOM FIELDS',
-	'title' => 'Development Options',
+	'title' => 'Press Options',
 	// 'page' => determines where the custom field is supposed to show up.
 	// here it is desplaying Testimonials, but other options are
 	// page or post
@@ -46,8 +46,15 @@ $development_management_box = array(
 	'fields' => array(
 	
 		array( 
-			"name" => "Location",
-			"id" => $prefix."_location",
+			"name" => "PDF / File Upload",
+			"id" => $prefix."_file",
+			"type" => "upload_file",
+			"std" => ""
+		),
+
+		array( 
+			"name" => "Press link",
+			"id" => $prefix."_press_link",
 			"type" => "text",
 			"std" => ""
 		),
@@ -67,16 +74,16 @@ wp_enqueue_script('color-picker', get_template_directory_uri().'/options/js/colo
 
 
 /* ----------------------------------------------- DONT TOUCH BELOW UNLESS YOU KNOW WHAT YOU'RE DOING */
-add_action('admin_menu', 'development_management_add_boxer');
+add_action('admin_menu', 'press_add_boxer');
 // Add meta boxer
-function development_management_add_boxer() {
-	global $development_management_box;
-	foreach ( array( 'development' ) as $page )
-	add_meta_box($development_management_box['id'], $development_management_box['title'], 'development_management_show_boxer', $page, $development_management_box['context'], 			$development_management_box['priority']);
+function press_add_boxer() {
+	global $press_box;
+	foreach ( array( 'press' ) as $page )
+	add_meta_box($press_box['id'], $press_box['title'], 'press_show_boxer', $page, $press_box['context'], 			$press_box['priority']);
 }
 // Callback function to show fields in meta boxer
-function development_management_show_boxer() {
-	global $development_management_box, $post;
+function press_show_boxer() {
+	global $press_box, $post;
 	// Use nonce for verification
 	
 	echo '
@@ -142,9 +149,9 @@ jQuery(document).ready(function() {
 		
 		';
 		
-	echo '<input type="hidden" name="development_management_development_management_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+	echo '<input type="hidden" name="press_press_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
 	echo '<table class="form-table">';
-	foreach ($development_management_box['fields'] as $field) {
+	foreach ($press_box['fields'] as $field) {
 		// get current post meta data
 		$meta = get_post_meta($post->ID, $field['id'], true);
 		echo '<tr>',
@@ -164,6 +171,10 @@ jQuery(document).ready(function() {
 				
 			case 'upload':
 				echo '<div style="font-weight: bold;" class="title">' ,$field['name'], '</div><div style="font-style: italic; font-size: 12px; color: #a2a2a2;"class="descriptive">', $field['desc'], '</div>', '<input type="text" class="upload_image" name="', $field['id'], '" id="', $field['id'], '"  value="', $meta ? $meta : $field['std'], '" size="30" style="width: 100%; padding: 10px;" /><input class="upload_image_button button button-primary button-large" style="margin-top: 10px;" type="button" value="Upload Image" />';
+				break;
+
+			case 'upload_file':
+				echo '<div style="font-weight: bold;" class="title">' ,$field['name'], '</div><div style="font-style: italic; font-size: 12px; color: #a2a2a2;"class="descriptive">', $field['desc'], '</div>', '<input type="text" class="upload_image" name="', $field['id'], '" id="', $field['id'], '"  value="', $meta ? $meta : $field['std'], '" size="30" style="width: 100%; padding: 10px;" /><input class="upload_image_button button button-primary button-large" style="margin-top: 10px;" type="button" value="Upload File" />';
 				break;
 			
 			case 'textarea':
@@ -194,12 +205,12 @@ jQuery(document).ready(function() {
 	echo '</table>';
 }
 
-add_action('save_post', 'development_management_save_data');
+add_action('save_post', 'press_save_data');
 // Save data from meta boxer
-function development_management_save_data($post_id) {
-	global $development_management_box;	
+function press_save_data($post_id) {
+	global $press_box;	
 	// verify nonce
-	if (!wp_verify_nonce($_POST['development_management_development_management_box_nonce'], basename(__FILE__))) {
+	if (!wp_verify_nonce($_POST['press_press_box_nonce'], basename(__FILE__))) {
 		return $post_id;
 	}
 	// check autosave
@@ -213,7 +224,7 @@ function development_management_save_data($post_id) {
 	} elseif (!current_user_can('edit_post', $post_id)) {
 		return $post_id;
 	}
-	foreach ($development_management_box['fields'] as $field) {
+	foreach ($press_box['fields'] as $field) {
 		$old = get_post_meta($post_id, $field['id'], true);
 		$new = $_POST[$field['id']];		
 		if ($new && $new != $old) {

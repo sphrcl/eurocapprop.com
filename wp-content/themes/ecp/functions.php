@@ -34,6 +34,7 @@ include(TEMPLATEPATH .  '/options/slider-with-description-repeatable-fields.php'
 include(TEMPLATEPATH .  '/options/options-leadership-management.php');
 include(TEMPLATEPATH .  '/options/options-development.php');
 include(TEMPLATEPATH .  '/options/options-partnership.php');
+include(TEMPLATEPATH .  '/options/options-press.php');
 
 
  /* ................. SOME OPTIONS FOR PROJECTS .................... */

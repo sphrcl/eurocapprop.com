@@ -36,7 +36,7 @@ $pagetypes = array('Basic No Feature', 'Scrolling Feature', 'Full Screen Feature
 
 $leadership_management_box = array(
 	'id' => 'CUSTOM FIELDS',
-	'title' => 'Additional Variations For Your Project Pages',
+	'title' => 'Leadership and Management Options',
 	// 'page' => determines where the custom field is supposed to show up.
 	// here it is desplaying Testimonials, but other options are
 	// page or post
