@@ -30,7 +30,7 @@ get_header();
 							get_post_meta($post->ID,'misfit_press_link',true); 
 						}
 					?>">
-						<img class="press-title" src="<?php echo get_post_meta($post->ID, 'misfit_press_image', true); ?>">
+						<img class="press-title" src="<?php echo get_post_meta($post->ID, 'misfit_file', true); ?>">
 						<p><?php the_content(); ?></p>
 						<span class="press-date"><?php the_date('F j, Y'); ?></span>
 						<!-- <span class="press-see-photos">See photos</span> -->
