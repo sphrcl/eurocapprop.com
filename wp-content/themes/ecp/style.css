@@ -758,7 +758,7 @@ ul.topnavigation li a:hover {
 
 .person-description .left {
     overflow: hidden;  
-    height: 4.6em;
+    height: 5.6em;
     width: 75%;
 }
 
@@ -797,6 +797,8 @@ ul.topnavigation li a:hover {
 }
 
 .person-wrapper .person-details .right {
+    max-height: 310px;
+    overflow: auto;
     width: 53%;
 }
 
@@ -941,6 +943,10 @@ ul.topnavigation li a:hover {
 
 .page-template-page-partnership-php .person-description .left {
 	width: 100%;
+}
+
+.page-template-page-partnership-php .team > li {
+    margin-bottom: 30px;
 }
 
 .page-template-page-partnership-php .team li:nth-child(3n) {
