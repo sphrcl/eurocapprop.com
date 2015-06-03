@@ -33,6 +33,7 @@ include(TEMPLATEPATH .  '/options/page-options.php');
 include(TEMPLATEPATH .  '/options/slider-with-description-repeatable-fields.php');
 include(TEMPLATEPATH .  '/options/leadership-management-options.php');
 include(TEMPLATEPATH .  '/options/development-options.php');
+include(TEMPLATEPATH .  '/options/press-options.php');
 
 
  /* ................. SOME OPTIONS FOR PROJECTS .................... */

@@ -994,6 +994,19 @@ ul.topnavigation li a:hover {
   right: 47px;
 }
 
+.press-title { 
+  transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+
+
+
+  opacity: 0; 
+}
+
+.press-container:hover .press-title { opacity: 1; }
+
 
 
 /* SLIDER */
