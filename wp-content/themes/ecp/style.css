@@ -929,6 +929,29 @@ ul.topnavigation li a:hover {
 
 
 
+/* PAGE - Partnerships ################################################################################################ */
+
+.page-template-page-partnership-php .person-description .left {
+	width: 100%;
+}
+
+.page-template-page-partnership-php .team li:nth-child(3n) {
+	/*width: 31%;*/
+	margin-right: 0;
+}
+
+.page-template-page-partnership-php .team li > div {
+    background-position: center center;
+    background-size: auto auto;
+    border: 1px solid #ececec;
+}
+
+.page-template-page-partnership-php .team li > div.person-description {
+	border: 0;
+}
+
+
+
 /* PAGE - NEWS & PRESS PAGE -----------------------------------------------------------*/
 
 .press-container {
