@@ -23,10 +23,6 @@ get_header();
 
 				<div class="press-container" style="background-image: url(<?php echo tt($imgsrc[0],370,280); ?>);">
 
-<<<<<<< HEAD
-					<a href="<?php get_post_meta($post->ID,'misfit_press_link',true); ?>">
-						<img class="press-title" src="<?php echo get_post_meta($post->ID, 'misfit_press_image', true); ?>">
-=======
 					<a href="<?php 
 						if( get_post_meta($post->ID,'misfit_file',true) ) {
 							get_post_meta($post->ID,'misfit_file',true); 
@@ -34,7 +30,7 @@ get_header();
 							get_post_meta($post->ID,'misfit_press_link',true); 
 						}
 					?>">
->>>>>>> origin/master
+						<img class="press-title" src="<?php echo get_post_meta($post->ID, 'misfit_press_image', true); ?>">
 						<p><?php the_content(); ?></p>
 						<span class="press-date"><?php the_date('F j, Y'); ?></span>
 						<!-- <span class="press-see-photos">See photos</span> -->
