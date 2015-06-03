@@ -183,7 +183,8 @@ img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
 .menu li a,
 .person-description .right,
 .press-container a,
-.close-button {
+.close-button,
+.press-container h3 {
 	transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -970,6 +971,14 @@ ul.topnavigation li a:hover {
 
 .press-container:hover .press-see-photos { display: block; }
 
+.press-container h3 {
+    color: #fff;
+    opacity: 0;
+}
+	.press-container:hover h3 {
+		opacity: 1;
+	}
+
 .press-container:hover a:after { display: block; }
 
 .press-container a:after {
@@ -986,11 +995,14 @@ ul.topnavigation li a:hover {
 .press-container a:hover { background-color: rgba(0,0,0,0); }
 
 .press-container a {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0);
   vertical-align: middle;
   display: table-cell;
   text-align: center;
 }
+	.press-container:hover a {
+		background-color: rgba(0,0,0,0.6);
+	}
 
 .press-container a p {
   text-transform: uppercase;
