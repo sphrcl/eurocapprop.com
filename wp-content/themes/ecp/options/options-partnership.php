@@ -34,9 +34,9 @@ $prefix = 'misfit';
 $numbers = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9+');
 $pagetypes = array('Basic No Feature', 'Scrolling Feature', 'Full Screen Feature', 'Colored Background Area');
 
-$leadership_management_box = array(
+$partnership_box = array(
 	'id' => 'CUSTOM FIELDS',
-	'title' => 'Additional Variations For Your Project Pages',
+	'title' => 'Partnership Options',
 	// 'page' => determines where the custom field is supposed to show up.
 	// here it is desplaying Testimonials, but other options are
 	// page or post
@@ -46,8 +46,8 @@ $leadership_management_box = array(
 	'fields' => array(
 	
 		array( 
-			"name" => "Title",
-			"id" => $prefix."_title_position",
+			"name" => "Industry",
+			"id" => $prefix."_industry",
 			"type" => "text",
 			"std" => ""
 		),
@@ -67,16 +67,16 @@ wp_enqueue_script('color-picker', get_template_directory_uri().'/options/js/colo
 
 
 /* ----------------------------------------------- DONT TOUCH BELOW UNLESS YOU KNOW WHAT YOU'RE DOING */
-add_action('admin_menu', 'leadership_management_add_boxer');
+add_action('admin_menu', 'partnership_add_boxer');
 // Add meta boxer
-function leadership_management_add_boxer() {
-	global $leadership_management_box;
-	foreach ( array( 'leadership', 'management' ) as $page )
-	add_meta_box($leadership_management_box['id'], $leadership_management_box['title'], 'leadership_management_show_boxer', $page, $leadership_management_box['context'], 			$leadership_management_box['priority']);
+function partnership_add_boxer() {
+	global $partnership_box;
+	foreach ( array( 'partnership' ) as $page )
+	add_meta_box($partnership_box['id'], $partnership_box['title'], 'partnership_show_boxer', $page, $partnership_box['context'], 			$partnership_box['priority']);
 }
 // Callback function to show fields in meta boxer
-function leadership_management_show_boxer() {
-	global $leadership_management_box, $post;
+function partnership_show_boxer() {
+	global $partnership_box, $post;
 	// Use nonce for verification
 	
 	echo '
@@ -142,9 +142,9 @@ jQuery(document).ready(function() {
 		
 		';
 		
-	echo '<input type="hidden" name="leadership_management_leadership_management_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+	echo '<input type="hidden" name="partnership_partnership_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
 	echo '<table class="form-table">';
-	foreach ($leadership_management_box['fields'] as $field) {
+	foreach ($partnership_box['fields'] as $field) {
 		// get current post meta data
 		$meta = get_post_meta($post->ID, $field['id'], true);
 		echo '<tr>',
@@ -194,12 +194,12 @@ jQuery(document).ready(function() {
 	echo '</table>';
 }
 
-add_action('save_post', 'leadership_management_save_data');
+add_action('save_post', 'partnership_save_data');
 // Save data from meta boxer
-function leadership_management_save_data($post_id) {
-	global $leadership_management_box;	
+function partnership_save_data($post_id) {
+	global $partnership_box;	
 	// verify nonce
-	if (!wp_verify_nonce($_POST['leadership_management_leadership_management_box_nonce'], basename(__FILE__))) {
+	if (!wp_verify_nonce($_POST['partnership_partnership_box_nonce'], basename(__FILE__))) {
 		return $post_id;
 	}
 	// check autosave
@@ -213,7 +213,7 @@ function leadership_management_save_data($post_id) {
 	} elseif (!current_user_can('edit_post', $post_id)) {
 		return $post_id;
 	}
-	foreach ($leadership_management_box['fields'] as $field) {
+	foreach ($partnership_box['fields'] as $field) {
 		$old = get_post_meta($post_id, $field['id'], true);
 		$new = $_POST[$field['id']];		
 		if ($new && $new != $old) {
