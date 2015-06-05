@@ -929,6 +929,18 @@ ul.topnavigation li a:hover {
 	text-align: right;
 }
 
+.development-divider .touchcarousel-item a img {
+  display: none;
+}
+
+.development-divider .team {
+  text-align: left;
+}
+
+.development-divider .team > li {
+  width: 31.6%;
+}
+
 .page-template-page-development-php .person-description .left {
 	width: 100%;
 }
