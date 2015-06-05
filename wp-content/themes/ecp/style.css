@@ -722,9 +722,9 @@ ul.topnavigation li a:hover {
 	position: relative;
 }
 
-.team > li:last-child {
+/*.team > li:last-child {
 	margin-right:0;
-}
+}*/
 
 .team li > div {
 	background-position:center top;
