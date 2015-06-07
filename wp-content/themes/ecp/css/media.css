@@ -331,7 +331,28 @@
   		float: none;
   		left: auto;
 	}
-
+	
+	
+	.page-slider .item > div p { font-size: 13px; }
+	.hiddennav { display: block; }
+	.top-person .left { width: 100%; }
+	.page .container { padding-top: 70px; width: 90%; }
+	.top-person .right { width: 100%; }
+	
+	.press-container { width: 100% }
+	
+	.column_one_half, .column_one_third, .column_one_fourth, .column_two_thirds, .column_three_fourths { width: 100%; float: none; }
+	
+	.team > li { width: 100%; }
+	.development-divider .team > li { width: 100%; }
+	.liner { width: 100%; text-align: left; max-width: 100%;}
+	
+	.menu { display: none; }
+	.home .menu { display: block; }
+	.logo img {   position: relative; width: 100px;  min-width: 100px; }
+	.contact-container p.address { width: 100%; float: none; text-align: left; }
+	.contact-container .tel-fax  { width: 100%; float: none; }
+	.container .content { width: 100%; }
 }
 
 

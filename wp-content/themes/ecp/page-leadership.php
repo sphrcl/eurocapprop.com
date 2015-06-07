@@ -46,7 +46,7 @@ get_header();
 
 		<?php } wp_reset_query(); ?>
 
-		<h2>Leadership Team</h2>
+		<h2 style="color: #757575;">Leadership Team</h2>
 
 		<?php
 			$query_leadership_team = new wp_query(array(
@@ -70,7 +70,7 @@ get_header();
 				
 						<li>
 							
-							<div class="photo" style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"></div>
+							<div class="photo" style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"><a class="dropanchor open-detail"></a></div>
 							<h3><?php the_title(); ?></h3>
 							<h4><?php echo get_post_meta($post->ID,'misfit_title_position',true); ?></h4>
 							<div class="person-description">

@@ -18,7 +18,7 @@ get_header();
 		<div class="top-person">
 
 			<h3><?php echo get_post_meta($post->ID,'misfit_subtit',true); ?></h3>
-			<?php the_content(); ?>
+			<div class="liner"><?php the_content(); ?></div>
 			
 		</div>
 
@@ -33,7 +33,7 @@ get_header();
 						array(
 							'taxonomy' => 'development-type',
 							'field'    => 'slug',
-							'terms'    => 'us',
+							'terms'    => 'united-states',
 						),
 					),
 				)); 
@@ -65,6 +65,12 @@ get_header();
 								
 								<?php endif; ?>
 								<?php endfor; ?>
+								
+								<?php else : ?>
+								
+									<div class="item" style="background-image: url(<?php echo $imgsrc[0]; ?>);"></div>
+									
+									
 								<?php endif; ?>
 
 							</div>

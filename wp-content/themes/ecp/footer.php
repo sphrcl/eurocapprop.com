@@ -17,7 +17,11 @@
 		</div>
 
 	</div>
-
+	
+	
+		<ul class="hiddennavigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ,  'container' => false, 'items_wrap' => '%3$s' ) ); ?>
+		</ul>
 
 <?php wp_footer(); ?>
 
@@ -69,7 +73,7 @@
 
 	});
 </script>
-
+</div>
 </body>
 </html>
 

@@ -30,7 +30,7 @@
 		<!-- Google Web Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 	
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/flexslider.css">
 
@@ -62,17 +62,20 @@
 	</head> 
 	
 	<body <?php body_class(); ?>>
-
+	
+	<div class="wrapper">
 	<div id="header">
 
 		<div class="container">
 			<div class="logo">
-				<a href="<?php bloginfo ('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/ecp-logo.png" alt="The Water Gate Hotel"></a>
+				<a href="<?php bloginfo ('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo-reduction.jpg" alt="The Water Gate Hotel"></a>
 			</div>
 
 			<ul class="menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ,  'container' => false, 'items_wrap' => '%3$s' ) ); ?>
 			</ul>
+			
+			<span class="hiddennav"><a href="#"><i class="fa fa-bars"></i></a></span>
 		</div>
 
 	</div>
