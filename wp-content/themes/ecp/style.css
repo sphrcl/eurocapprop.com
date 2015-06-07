@@ -493,31 +493,34 @@ ul.topnavigation li a:hover {
 /* HOMEPAGE #################################################################################################### */
 
 .ecp-home {
-    height: 78%;
+    height: 85%;
 }
 
-.ecp-home > img {
+
+.ecp-home-lining {
 	transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
+	position: absolute;
+	top: 45%;
+	width: 100%;
+	text-align: center;
+	left: 0;
+}
+.ecp-home img {
     display: block;
-    left: 0;
     margin: 0 auto;
-    position: absolute;
-    right: 0;
-    top: 30%;
-    height: 40%;
+      width: 25%;
 }
 
 .home .menu {
-	transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-    position: absolute;
     text-align: center;
     text-transform: uppercase;
-    top: 58%;
     width: 100%;
+    position: relative;
+    transform: none;
+    top: auto;
+    margin-top: 50px;
 }
 
 .home .menu li {
@@ -532,7 +535,7 @@ ul.topnavigation li a:hover {
 
 .home .menu a {
     color: #000;
-    font-weight: bold;
+    font-family: 'avenir-med',"Helvetica", "Arial";
 }
 	.home .menu a:hover, .menu a:hover {
 		color: #b18933;
@@ -1148,20 +1151,20 @@ div#footer {
 }
 
 .home div#footer {
-    height: 22%;
+    height: 20%;
     padding-top: 0;
 }
 
 #footer .left {
     left: 5%;
     position: absolute;
-    top: 50%;
+    top: 30%;
 }
 
 #footer .right {
     right: 5%;
     position: absolute;
-    top: 50%;
+    top: 30%;
 }
 
 #footer .left p span.tel {
