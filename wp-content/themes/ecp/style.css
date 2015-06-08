@@ -1005,6 +1005,7 @@ ul.topnavigation li a:hover {
 }
 
 .page-template-page-management .top-person .left {
+  margin-bottom: 20px;
 	height: auto;
 }
 
@@ -1017,6 +1018,27 @@ ul.topnavigation li a:hover {
  	color: #bababa;
  	margin: 0 0 20px 0;
 }
+
+.page-template-page-management .content {
+  margin: 0;
+}
+
+.page-template-page-management .top-person a {
+  text-decoration: none;
+  position: relative;
+  opacity: 0.5;
+}
+
+.page-template-page-management .top-person a:hover {
+  opacity: 1;
+}
+
+.page-template-page-management .top-person a img {
+  position: absolute;
+  right: -45px;
+  top: -4px;
+}
+
 
 /* CONTACT PAGE ################################################################################################ */
 

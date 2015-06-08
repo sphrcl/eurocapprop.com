@@ -40,7 +40,7 @@ get_header();
 				
 				<h3><?php echo get_post_meta($post->ID,'misfit_subtit',true); ?></h3>
 				<?php the_content(); ?>
-				<a class="read-more-management"></a>
+				<a class="read-more-management">Read More<img src="<?php bloginfo('template_url'); ?>/images/right-arrow.png"></a>
 
 			</div>
 			
