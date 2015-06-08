@@ -947,20 +947,6 @@ ul.topnavigation li a:hover {
     margin-bottom: 25px;
 }
 
-.close-button {
-	background: rgba(0, 0, 0, 0) url("images/close-button.png") no-repeat scroll 0 0 / cover ;
-	cursor: pointer;
-	height: 14px;
-	opacity: 0.5;
-	position: absolute;
-	right: 10px;
-	top: 50px;
-	width: 14px;
-}
-	.close-button:hover {
-		opacity: 1;
-	}
-
 /* Person lightbox */
 
 .open-detail {
@@ -1017,6 +1003,7 @@ ul.topnavigation li a:hover {
 .page-template-page-management h2  {
  	color: #bababa;
  	margin: 0 0 20px 0;
+	font-size: 36px;
 }
 
 .page-template-page-management .content {
@@ -1037,6 +1024,126 @@ ul.topnavigation li a:hover {
   position: absolute;
   right: -45px;
   top: -4px;
+}
+
+/* Members */
+
+.mem {
+	text-align:center;
+	position: relative;
+}
+
+.memli {
+	display:inline-block;
+	margin-right:1.5%;
+	text-align:left;
+	width: 31.83333333333333333%;
+	position: relative;
+	margin-bottom: 40px;
+	float: left;
+}
+
+.teamimg {
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:240px;
+	margin-bottom:20px;
+	width:100%;
+	position: relative;
+}
+
+.memli h3,
+.memberwrap h3 {
+	color: #333;
+	margin-bottom: 5px;
+}
+
+.memli h4,
+.memberwrap h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.team-desc {
+    position: relative;
+}
+
+.team-desc p,
+.mw-desc p {
+	color:#393939;
+}
+
+.team-desc .left {
+    overflow: hidden;  
+    height: 5em;
+    width: 75%;
+}
+
+.team-desc .open-detail {
+	position: absolute;
+	right: 30px;
+	top: 30%;
+	opacity: .5;
+}
+	.team-desc .open-detail:hover {
+		opacity: 1;
+	}
+
+
+/* lightbox */
+
+.memberwrap {
+	background: #fff none repeat scroll 0 0;
+	border-bottom: 1px solid #b5b5b5;
+	border-top: 1px solid #b5b5b5;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.mw-container {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 95%;
+}
+
+.mw-open {
+	padding: 50px 60px;
+	position: relative;
+}
+
+.mw-img {
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+	height: 310px;
+	width: 43%;
+}
+
+.mw-content {
+	float: right;
+	max-height: 310px;
+	overflow: auto;
+	width: 53%;
+}
+
+.close-button {
+	background: url("images/close-button.png") no-repeat scroll 0 0 transparent;
+	background-size: cover;
+	cursor: pointer;
+	height: 14px;
+	opacity: 0.5;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 14px;
+}
+
+.close-button:hover {
+	opacity: 1;
 }
 
 

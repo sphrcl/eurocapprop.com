@@ -1,15 +1,20 @@
 $(document).ready(function(){
 	
 	$('.open-detail').click(function(e){
-		e.preventDefault()
-		$(this).parent().parent('li').addClass('open-details')
-		$(this).parent().parent().find('.person-wrapper').fadeIn()
-	})
+		e.preventDefault();
+		
+		var teamliclass = $(this).attr('class'),
+		replaceclass = teamliclass.replace('open-detail ', ''),
+		replaceclass = replaceclass.replace('dropanchor ', ''),
+		movewrap = $(this).parent().parent('li').offset().top;
+		
+		$('.memberwrap.' + replaceclass).fadeIn();
+		$('.memberwrap.' + replaceclass).css('top', movewrap);
+	});
 
 	$('.close-button').click(function(){
-		$(this).parent().parent().parent().removeClass('open-details')
-		$(this).parent().parent().fadeOut()
-	})
+		$('.memberwrap').fadeOut();
+	});
 	
 	
 	$(".hiddennav a").click(function(e){
