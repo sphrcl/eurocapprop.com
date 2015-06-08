@@ -816,7 +816,7 @@ ul.topnavigation li a:hover {
 
 .top-person .right {
 	width: 48%;
-	padding-top: 40px;
+	padding-top: 0;
 }
 
 .top-person .right.owl-carousel {
@@ -947,41 +947,6 @@ ul.topnavigation li a:hover {
     margin-bottom: 25px;
 }
 
-/* TEMP */
-.top-person .person-wrapper, .top-person .open-details .person-wrapper {
-  background: #fff none repeat scroll 0 0;
-  border-bottom: 1px solid #b5b5b5;
-  border-top: 1px solid #b5b5b5;
-  height: auto;
-  left: 0;
-  margin-bottom: 20px;
-  overflow: hidden;
-  padding: 50px 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 99;
-}
-
-.person-wrapper .person-details .person-lightbox-image {
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 310px;
-    width: 43%;
-    float: left;
-}
-
-.person-wrapper .person-details .right {
-    max-height: 310px;
-    overflow: auto;
-    width: 53%;
-}
-
-.top-person .person-wrapper h4 {
-    margin-bottom: 25px;
-}
-
 .close-button {
 	background: rgba(0, 0, 0, 0) url("images/close-button.png") no-repeat scroll 0 0 / cover ;
 	cursor: pointer;
@@ -1022,35 +987,66 @@ ul.topnavigation li a:hover {
 }
 
 
-/* TEMP */
+/* Management lightbox */
+.top-person .person-wrapper, .top-person .open-details .person-wrapper {
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 1px solid #b5b5b5;
+  border-top: 1px solid #b5b5b5;
+  height: auto;
+  left: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 50px 0;
+  position: relative;
+  top: -300px;
+  width: 100%;
+  z-index: 99;
+}
 
-.open-detail {
-  cursor: pointer;
+.top-person .person-wrapper h4 {
+    margin-bottom: 25px;
 }
 
 .top-person .open-details {
     background: #fff none repeat scroll 0 0;
     left: 0;
-    position: absolute;
-    top: 250px;
+    position: relative;
     width: 100%;
+    height: 374px;
     z-index: 9;
+    margin-bottom: 70px;
 }
 
 .top-person .person-description {
   overflow-y: scroll;
-  height: 374px;
-}
-/*.top-person .open-details .photo, .top-person .open-details h3, .top-person .open-details h4 {
-  background: none transparent;
-  visibility: hidden;
-  opacity: 0;
+  height: 267px;
 }
 
-.top-person .open-details .right {
-  display: none;
-}*/
+.top-person .person-details .right {
+  height: 310px;
+  width: 50%;
+}
 
+.top-person .open-detail {
+  text-decoration: none;
+  position: relative;
+  opacity: 0.5;
+}
+
+.top-person .open-detail:hover {
+  opacity: 1;
+}
+
+.top-person .open-detail img {
+  position: absolute;
+  right: -45px;
+  top: -4px;
+}
+
+.top-person .close-button {
+  right: 3px;
+  top: 18px;
+}
 
 /* PAGE - Management ################################################################################################ */
 
@@ -1086,23 +1082,6 @@ ul.topnavigation li a:hover {
 .page-template-page-management .content {
   margin: 0;
 }
-
-.page-template-page-management .top-person a {
-  text-decoration: none;
-  position: relative;
-  opacity: 0.5;
-}
-
-.page-template-page-management .top-person a:hover {
-  opacity: 1;
-}
-
-.page-template-page-management .top-person a img {
-  position: absolute;
-  right: -45px;
-  top: -4px;
-}
-
 
 /* CONTACT PAGE ################################################################################################ */
 

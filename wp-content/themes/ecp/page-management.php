@@ -38,45 +38,22 @@ get_header();
 
 				</div>
 
-				<div class="left test">
+				<div class="left">
 					
 					<h3><?php echo get_post_meta($post->ID,'misfit_subtit',true); ?></h3>
-					<?php the_content(); ?> 
+					<?php echo get_post_meta($post->ID, 'misfit_readmore', true); ?>
 					<a class="open-detail">Read More<img src="<?php bloginfo('template_url'); ?>/images/right-arrow.png"></a>
 
 				</div>
 
 				<div class="person-wrapper" style="display: none;">
 					<div class="person-details">
-
-					<!-- 	<div class="person-lightbox-image right">
-							
-							<div id="owl1" class="right owl-carousel owl-theme">
-
-								<?php 
-									$galleryImages = get_post_gallery_imagess(); 
-									$imagesCount = count($galleryImages);
-								?>
-							           
-					    		<?php if ($imagesCount > 0) : ?>
-					          	<?php for ($i = 0; $i < $imagesCount; $i++): ?>
-					            <?php if (!empty($galleryImages[$i])) :?>
-
-									<div class="item" style="background-image: url(<?php echo tt($galleryImages[$i]['full'][0],580,550); ?>);"></div>
-								
-								<?php endif; ?>
-								<?php endfor; ?>
-								<?php endif; ?>
-
-							</div>
-
-						</div> -->
-
-						<div class="left">
-							<h3><?php echo get_post_meta($post->ID,'misfit_subtit',true); ?></h3>
+					
+						<div class="left" style="width: 100% !important;">
 							<div class="person-description">
-								<?php the_content(); ?>
+								<h3><?php echo get_post_meta($post->ID,'misfit_subtit',true); ?></h3>
 								<?php echo get_post_meta($post->ID, 'misfit_readmore', true); ?>
+								<?php the_content(); ?>
 							</div>
 						</div>
 
