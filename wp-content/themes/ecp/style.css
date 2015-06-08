@@ -1141,13 +1141,13 @@ ul.topnavigation li a:hover {
     width: 75%;
 }
 
-.team-desc .open-detail {
+.team-desc .mem-detail {
 	position: absolute;
 	right: 30px;
 	top: 30%;
 	opacity: .5;
 }
-	.team-desc .open-detail:hover {
+	.team-desc .mem-detail:hover {
 		opacity: 1;
 	}
 
@@ -1190,7 +1190,7 @@ ul.topnavigation li a:hover {
 	width: 53%;
 }
 
-.close-button {
+.mem-close {
 	background: url("images/close-button.png") no-repeat scroll 0 0 transparent;
 	background-size: cover;
 	cursor: pointer;

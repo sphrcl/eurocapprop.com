@@ -88,12 +88,12 @@ get_header();
 				
 						<li class="memli">
 							
-							<div class="teamimg" style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"><a class="dropanchor open-detail mem<?php echo $count;?>"></a></div>
+							<div class="teamimg" style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"><a class="dropanchor mem-detail mem<?php echo $count;?>"></a></div>
 							<h3><?php the_title(); ?></h3>
 							<h4><?php echo get_post_meta($post->ID,'misfit_title_position',true); ?></h4>
 							<div class="team-desc">
 								<div class="left"><?php echo excerpt(20); ?></div>
-								<a class="open-detail mem<?php echo $count;?>" href="#"><img src="<?php bloginfo('template_url'); ?>/images/right-arrow.png"></a>
+								<a class="mem-detail mem<?php echo $count;?>" href="#"><img src="<?php bloginfo('template_url'); ?>/images/right-arrow.png"></a>
 							</div>
 						</li>
 
@@ -135,7 +135,7 @@ get_header();
 							<div class="mw-desc"><?php the_content(); ?></div>
 						</div>
 						
-						<div class="close-button"></div>
+						<div class="mem-close"></div>
 						
 						<div class="clear"></div>
 					
