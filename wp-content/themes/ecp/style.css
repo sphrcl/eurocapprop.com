@@ -1340,12 +1340,13 @@ ul.topnavigation li a:hover {
 
 .press-container h3 {
     color: #fff;
+    opacity: 0;
 }
-	.press-container: h3 {
+	.press-container:hover h3 {
 		opacity: 1;
 	}
 
-.press-container  a:after { display: block; }
+.press-container:hover a:after { display: block; }
 
 .press-container a:after {
   background: url(images/arrow.png) no-repeat;
@@ -1358,14 +1359,15 @@ ul.topnavigation li a:hover {
   content: '';
 }
 
-.press-container a  { background-color: rgba(0,0,0,0); }
+.press-container a:hover { background-color: rgba(0,0,0,0); }
 
 .press-container a {
+  background-color: rgba(0,0,0,0);
   vertical-align: middle;
   display: table-cell;
   text-align: center;
 }
-	.press-container a {
+	.press-container:hover a {
 		background-color: rgba(0,0,0,0.6);
 	}
 
