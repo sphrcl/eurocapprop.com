@@ -610,10 +610,13 @@ ul.topnavigation li a:hover {
 
 /* HOMEPAGE #################################################################################################### */
 
+.home .wrapper {
+    height: 100%;
+}
+
 .ecp-home {
     height: 85%;
 }
-
 
 .ecp-home-lining {
 	transform: translateY(-50%);
