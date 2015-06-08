@@ -22,6 +22,8 @@ get_header();
 			</p>
 
 			<p class="email">info@eurocapprop.com<br/> press@eurocapprop.com<br/> marketing@eurocapprop.com</p>
+			
+			<div class="clear"></div>
 
 		</div>
 
