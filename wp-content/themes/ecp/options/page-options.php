@@ -54,6 +54,14 @@ $page_box = array(
         ),
 
         array( 
+			"name" => "Read More",
+			"desc" => "Read more for additional paragraphs.",
+			"id" => $prefix."_subtit",
+			"type" => "textarea",
+			"std" => ""
+        ),
+
+        array( 
               "name" => "Outbound link",
 	          "desc" => "If you want this to link elsewhere (like a PDF) upload and paste the url here",
 	          "id" => $prefix."_outbound",
