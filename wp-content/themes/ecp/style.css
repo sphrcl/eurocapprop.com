@@ -816,7 +816,7 @@ ul.topnavigation li a:hover {
 
 .top-person .right {
 	width: 48%;
-	padding-top: 40px;
+	padding-top: 0;
 }
 
 .top-person .right.owl-carousel {
@@ -858,7 +858,7 @@ ul.topnavigation li a:hover {
 .dropanchor {
 	position: absolute;
 	top: 0;
-	lefT: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 }
@@ -973,6 +973,66 @@ ul.topnavigation li a:hover {
 }
 
 
+/* Management lightbox */
+.top-person .person-wrapper, .top-person .open-details .person-wrapper {
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 1px solid #b5b5b5;
+  border-top: 1px solid #b5b5b5;
+  height: auto;
+  left: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 50px 0;
+  position: relative;
+  top: -300px;
+  width: 100%;
+  z-index: 99;
+}
+
+.top-person .person-wrapper h4 {
+    margin-bottom: 25px;
+}
+
+.top-person .open-details {
+    background: #fff none repeat scroll 0 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+    height: 374px;
+    z-index: 9;
+    margin-bottom: 70px;
+}
+
+.top-person .person-description {
+  overflow-y: scroll;
+  height: 267px;
+}
+
+.top-person .person-details .right {
+  height: 310px;
+  width: 50%;
+}
+
+.top-person .open-detail {
+  text-decoration: none;
+  position: relative;
+  opacity: 0.5;
+}
+
+.top-person .open-detail:hover {
+  opacity: 1;
+}
+
+.top-person .open-detail img {
+  position: absolute;
+  right: -45px;
+  top: -4px;
+}
+
+.top-person .close-button {
+  right: 3px;
+  top: 18px;
+}
 
 /* PAGE - Management ################################################################################################ */
 
