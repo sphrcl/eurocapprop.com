@@ -858,7 +858,7 @@ ul.topnavigation li a:hover {
 .dropanchor {
 	position: absolute;
 	top: 0;
-	lefT: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 }
@@ -947,6 +947,41 @@ ul.topnavigation li a:hover {
     margin-bottom: 25px;
 }
 
+/* TEMP */
+.top-person .person-wrapper, .top-person .open-details .person-wrapper {
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 1px solid #b5b5b5;
+  border-top: 1px solid #b5b5b5;
+  height: auto;
+  left: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 50px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.person-wrapper .person-details .person-lightbox-image {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 310px;
+    width: 43%;
+    float: left;
+}
+
+.person-wrapper .person-details .right {
+    max-height: 310px;
+    overflow: auto;
+    width: 53%;
+}
+
+.top-person .person-wrapper h4 {
+    margin-bottom: 25px;
+}
+
 .close-button {
 	background: rgba(0, 0, 0, 0) url("images/close-button.png") no-repeat scroll 0 0 / cover ;
 	cursor: pointer;
@@ -986,6 +1021,35 @@ ul.topnavigation li a:hover {
 	display: none;
 }
 
+
+/* TEMP */
+
+.open-detail {
+  cursor: pointer;
+}
+
+.top-person .open-details {
+    background: #fff none repeat scroll 0 0;
+    left: 0;
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    z-index: 9;
+}
+
+.top-person .person-description {
+  overflow-y: scroll;
+  height: 374px;
+}
+/*.top-person .open-details .photo, .top-person .open-details h3, .top-person .open-details h4 {
+  background: none transparent;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.top-person .open-details .right {
+  display: none;
+}*/
 
 
 /* PAGE - Management ################################################################################################ */

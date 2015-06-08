@@ -56,7 +56,7 @@ $page_box = array(
         array( 
 			"name" => "Read More",
 			"desc" => "Read more for additional paragraphs.",
-			"id" => $prefix."_subtit",
+			"id" => $prefix."_readmore",
 			"type" => "textarea",
 			"std" => ""
         ),
