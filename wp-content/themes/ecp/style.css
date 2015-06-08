@@ -1223,7 +1223,13 @@ ul.topnavigation li a:hover {
 	width: 100%;
 }
 
-.contact-container .address, .contact-container .tel-fax, .contact-container .email {
+.map-container img {
+	max-width: 100%;
+}
+
+.contact-container .address,
+.contact-container .tel-fax,
+.contact-container .email {
 	  float: left;
 }
 
