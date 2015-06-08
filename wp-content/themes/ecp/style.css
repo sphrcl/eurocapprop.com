@@ -1107,7 +1107,7 @@ ul.topnavigation li a:hover {
 	background-position:center top;
 	background-repeat:no-repeat;
 	background-size:cover;
-	height:240px;
+	height: 290px;
 	margin-bottom:20px;
 	width:100%;
 	position: relative;
@@ -1141,13 +1141,13 @@ ul.topnavigation li a:hover {
     width: 75%;
 }
 
-.team-desc .mem-detail {
+.team-desc .open-detail {
 	position: absolute;
 	right: 30px;
 	top: 30%;
 	opacity: .5;
 }
-	.team-desc .mem-detail:hover {
+	.team-desc .open-detail:hover {
 		opacity: 1;
 	}
 
@@ -1170,7 +1170,7 @@ ul.topnavigation li a:hover {
 }
 
 .mw-open {
-	padding: 50px 60px;
+	padding: 55px 60px;
 	position: relative;
 }
 
@@ -1179,7 +1179,7 @@ ul.topnavigation li a:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	float: left;
-	height: 310px;
+	height: 340px;
 	width: 43%;
 }
 
@@ -1190,7 +1190,7 @@ ul.topnavigation li a:hover {
 	width: 53%;
 }
 
-.mem-close {
+.close-button {
 	background: url("images/close-button.png") no-repeat scroll 0 0 transparent;
 	background-size: cover;
 	cursor: pointer;
@@ -1219,16 +1219,11 @@ ul.topnavigation li a:hover {
 .contact-container p { font-size: 20px; }
 
 .map-container {
+	margin-top: 115px;
 	width: 100%;
 }
 
-.map-container img {
-	max-width: 100%;
-}
-
-.contact-container .address,
-.contact-container .tel-fax,
-.contact-container .email {
+.contact-container .address, .contact-container .tel-fax, .contact-container .email {
 	  float: left;
 }
 
@@ -1269,7 +1264,7 @@ ul.topnavigation li a:hover {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 240px;
+	height: 280px;
 }
 
 .development-divider .owl-carousel .owl-controls {
