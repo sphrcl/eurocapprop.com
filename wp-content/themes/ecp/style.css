@@ -982,7 +982,7 @@ ul.topnavigation li a:hover {
   left: 0;
   margin-bottom: 20px;
   overflow: hidden;
-  padding: 50px 0;
+  padding: 40px 0 10px;
   position: relative;
   top: -300px;
   width: 100%;
@@ -993,7 +993,7 @@ ul.topnavigation li a:hover {
     margin-bottom: 25px;
 }
 
-.top-person .open-details {
+/*.top-person .open-details {
     background: #fff none repeat scroll 0 0;
     left: 0;
     position: relative;
@@ -1001,7 +1001,7 @@ ul.topnavigation li a:hover {
     height: 374px;
     z-index: 9;
     margin-bottom: 70px;
-}
+}*/
 
 .top-person .person-description {
   overflow-y: scroll;
@@ -1070,20 +1070,14 @@ ul.topnavigation li a:hover {
   margin: 0;
 }
 
-.page-template-page-management .top-person a {
-  text-decoration: none;
-  position: relative;
-  opacity: 0.5;
-}
-
-.page-template-page-management .top-person a:hover {
-  opacity: 1;
-}
-
-.page-template-page-management .top-person a img {
+.page-template-page-management .top-person .open-detail img {
   position: absolute;
   right: -45px;
   top: -4px;
+}
+
+.page-template-page-management .top-person {
+  margin-bottom: 0;
 }
 
 /* Members */

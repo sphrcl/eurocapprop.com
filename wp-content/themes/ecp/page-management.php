@@ -17,7 +17,7 @@ get_header();
 
 		<div class="top-person">
 
-			<div>
+			<div style="height: 370px;">
 	
 				<div id="owl1" class="right owl-carousel owl-theme">
 
