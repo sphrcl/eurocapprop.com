@@ -1004,7 +1004,7 @@ ul.topnavigation li a:hover {
 }*/
 
 .top-person .person-description {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 267px;
 }
 
@@ -1031,7 +1031,7 @@ ul.topnavigation li a:hover {
 
 .top-person .close-button {
   right: 3px;
-  top: 18px;
+  top: 12px;
 }
 
 /* PAGE - Management ################################################################################################ */
@@ -1184,15 +1184,15 @@ ul.topnavigation li a:hover {
 	width: 53%;
 }
 
-.close-button {
+.close-button, .mem-close {
 	background: url("images/close-button.png") no-repeat scroll 0 0 transparent;
 	background-size: cover;
 	cursor: pointer;
 	height: 14px;
 	opacity: 0.5;
 	position: absolute;
-	right: 15px;
-	top: 15px;
+	right: 62px;
+	top: 20px;
 	width: 14px;
 }
 
