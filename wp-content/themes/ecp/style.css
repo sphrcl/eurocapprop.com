@@ -738,10 +738,10 @@ ul.topnavigation li a:hover {
 }
 
 .page-slider .item > div p {
-	font-size: 23px;
-	color: #fff;
-	opacity: .8;
-	line-height: 1.4;
+  font-size: 18px;
+  color: #fff;
+  opacity: .8;
+  line-height: 1.6;
 }
 
 
@@ -1258,7 +1258,7 @@ ul.topnavigation li a:hover {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 280px;
+	height: 240px;
 }
 
 .development-divider .owl-carousel .owl-controls {
@@ -3486,5 +3486,15 @@ width: 570px;
 	z-index: 999999 !important;
 }
 
+/* SMALL EDITS ======================================================= */
 
-
+.partner-thumb {
+  height: 250px;
+}
+.partner-thumb {
+  border: 1px solid #ececec;
+  background-position: center center;
+  background-size: auto auto;
+  background-repeat: no-repeat; 
+  margin-bottom: 20px;
+}

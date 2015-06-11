@@ -34,13 +34,16 @@ get_header();
 					
 						<li>
 							
-							<div style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"></div>
-							<h3><?php the_title(); ?></h3>
-							<h4><?php echo get_post_meta($post->ID,'misfit_industry',true); ?></h4>
-							<div class="person-description">
-								<div class="left"><?php the_content(); ?></div>
-							</div>
-
+								<a target="_blank" href="<?php echo get_post_meta($post->ID, 'misfit_link', true); ?>">
+									<div class="partner-thumb" style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);">
+									</div>
+								</a>
+								<h3><?php the_title(); ?></h3>
+								<h4><?php echo get_post_meta($post->ID,'misfit_industry',true); ?></h4>
+								<div class="person-description">
+									<div class="left"><?php the_content(); ?></div>
+								</div>
+							
 						</li>
 
 					<?php endwhile; ?>
