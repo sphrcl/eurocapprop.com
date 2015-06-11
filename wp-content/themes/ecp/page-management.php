@@ -48,10 +48,28 @@ get_header();
 
 				<div class="person-wrapper" style="display: none;">
 					<div class="person-details">
-					
 						<div class="left" style="width: 100% !important;">
 							<div class="person-description">
-								<h3><?php echo get_post_meta($post->ID,'misfit_subtit',true); ?></h3>
+								<h3>
+									<div style="position:relative;padding-left: 40px;" class="right dev-slider owl-carousel owl-theme">
+
+										<?php 
+											$galleryImages = get_post_gallery_imagess(); 
+											$imagesCount = count($galleryImages);
+										?>
+									           
+							    		<?php if ($imagesCount > 0) : ?>
+							          	<?php for ($i = 0; $i < $imagesCount; $i++): ?>
+							            <?php if (!empty($galleryImages[$i])) :?>
+
+											<div class="item" style="background-image: url(<?php echo tt($galleryImages[$i]['full'][0],580,550); ?>);"></div>
+										
+										<?php endif; ?>
+										<?php endfor; ?>
+										<?php endif; ?>
+
+									</div>
+								<?php echo get_post_meta($post->ID,'misfit_subtit',true); ?></h3>
 								<?php echo get_post_meta($post->ID, 'misfit_readmore', true); ?>
 								<?php the_content(); ?>
 							</div>
