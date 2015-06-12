@@ -41,6 +41,7 @@
 			pagination: false,
 			singleItem : true,
 			responsive: true,
+			autoplay: true,
 		});
 
 		$(".next").click(function(){
