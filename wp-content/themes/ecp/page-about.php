@@ -20,6 +20,18 @@ get_header();
 			 if ($repeatable_fields) : 
 		?>
 
+		<?php 
+        	foreach ( $repeatable_fields as $field ){
+        		if ($ctr == 0){ ?>
+            		<div class="slider-caption">
+            			<h2><?php echo $field['namer']; ?></h2>
+	        			<p><?php echo $field['description']; ?></p>	
+	        		</div> 
+            		<?php $ctr ++;
+            	}
+            } 
+		?>	
+
 			<div id="owl" class="right owl-carousel owl-theme">
 
 			  	<?php foreach ( $repeatable_fields as $field ) { ?>
@@ -27,11 +39,6 @@ get_header();
 					<?php if ($field['url'] != '' || $field['description'] != '' || $field['namer'] != '') { ?>
 
 						<div class="item" style="background-image: url(<?php echo tt($field['url'],1200,500); ?>);">
-
-							<div>
-								<h2><?php echo $field['namer']; ?></h2>
-	        					<p><?php echo $field['description']; ?></p>	
-							</div>
 
 	        			</div>
 

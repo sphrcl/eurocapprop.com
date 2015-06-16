@@ -744,6 +744,32 @@ ul.topnavigation li a:hover {
   line-height: 1.6;
 }
 
+.slider-caption {
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    text-align: center;
+    z-index:1;
+    left:25%;
+}
+
+.slider-caption > h2 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.slider-caption> p {
+  font-size: 18px;
+  color: #fff;
+  opacity: .8;
+  line-height: 1.6;
+}
 
 /* PAGE #################################################################################################### */
 
