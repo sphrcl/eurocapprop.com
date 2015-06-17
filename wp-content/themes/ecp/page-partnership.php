@@ -41,7 +41,7 @@ get_header();
 									</a>
 									<h3><?php the_title(); ?></h3>
 									<h4><?php echo get_post_meta($post->ID,'misfit_industry',true); ?></h4>
-									<div class="team-desc person-description">
+									<div class="person-description">
 										<div class="left"><?php echo excerpt(20); ?></div>
 										<a class="mem-detail mem<?php echo $count;?>" href="#"><img src="<?php bloginfo('template_url'); ?>/images/right-arrow.png"></a>
 									</div>
