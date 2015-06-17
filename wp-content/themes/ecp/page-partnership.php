@@ -36,13 +36,14 @@ get_header();
 					
 							<li class="memli">
 								
-									<!--<a target="_blank" href="<?php echo get_post_meta($post->ID, 'misfit_link', true); ?>">-->
-										<div class="partner-thumb" style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"><a class="dropanchor mem-detail mem<?php echo $count;?>"></a></div>
-									<!--</a>-->
+									<a target="_blank" href="<?php echo get_post_meta($post->ID, 'misfit_link', true); ?>">
+										<div class="partner-thumb" style="background-image: url(<?php echo tt($imgsrc[0],320,240); ?>);"></div>
+									</a>
 									<h3><?php the_title(); ?></h3>
 									<h4><?php echo get_post_meta($post->ID,'misfit_industry',true); ?></h4>
-									<div class="person-description">
-										<div class="left"><?php the_content(); ?></div>
+									<div class="team-desc person-description">
+										<div class="left"><?php echo excerpt(20); ?></div>
+										<a class="mem-detail mem<?php echo $count;?>" href="#"><img src="<?php bloginfo('template_url'); ?>/images/right-arrow.png"></a>
 									</div>
 								
 							</li>
