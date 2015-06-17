@@ -32,7 +32,7 @@ get_header();
 					?>">
 						<a target="_blank" href="<?php echo get_post_meta($post->ID, 'misfit_press_link', true); ?>"><h3><?php the_title(); ?></h3></a>
 						<p><?php the_content(); ?></p>
-						<span class="press-date"><?php the_date('F j, Y'); ?></span>
+						<span class="press-date"><?php echo get_the_date("F j, Y"); ?></span>
 						<!-- <span class="press-see-photos">See photos</span> -->
 					</a>
 
