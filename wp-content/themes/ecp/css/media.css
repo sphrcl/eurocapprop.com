@@ -38,9 +38,12 @@
 		width: 320px;
 	}
 
+	.top-person .person-wrapper, .top-person .open-details .person-wrapper {
+		padding: 50px 0 55px;
+		top: -410px;
+	}
+
 }
-
-
 
 
 /* ================================================ 1000 ======================================= */
@@ -123,6 +126,19 @@
 	#dining .container {
 	  height: 655px;
 	}
+
+	.memli {
+  		width: 48%;
+	}
+
+	.development-divider .team > li {
+ 		width: 45.6%;
+	}
+
+	.top-person .person-wrapper, .top-person .open-details .person-wrapper {
+		padding: 90px 0;
+		top: -490px;
+	}
 	
 }
 
@@ -160,18 +176,16 @@
 	    padding: 75px 0 40px 0;
 	}
 	
-	
-	
 	.wpcf7-list-item {
-  margin-right: 4px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-top: 6px;
-  position: Relative;
-  top: 16px;
-  line-height: 23px;
-  display: block;
-  }
+	  margin-right: 4px;
+	  border: 1px solid #ddd;
+	  padding: 10px;
+	  margin-top: 6px;
+	  position: Relative;
+	  top: 16px;
+	  line-height: 23px;
+	  display: block;
+  	}
 
 	.address, .phone {
 		text-align: center;
