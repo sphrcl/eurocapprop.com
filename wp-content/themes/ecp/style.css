@@ -3524,3 +3524,11 @@ width: 570px;
   background-repeat: no-repeat; 
   margin-bottom: 20px;
 }
+
+.page_development .left.dev-slider.owl-carousel.owl-theme {
+    width: 45%;
+}
+
+.page_development .mw-img{
+  width:100%;
+}
