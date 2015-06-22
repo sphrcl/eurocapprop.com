@@ -20,7 +20,7 @@ $(document).ready(function(){
 		movewrap = $(this).parent().parent('li').offset().top;
 		
 		$('.memberwrap.' + replaceclass).fadeIn();
-		$('.memberwrap.' + replaceclass).css('top', movewrap - 56);
+		$('.memberwrap.' + replaceclass).css('top', movewrap);
 	});
 	
 	$('.mem-close').click(function(){
