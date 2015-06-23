@@ -30,7 +30,7 @@ get_header();
 		          	<?php for ($i = 0; $i < $imagesCount; $i++): ?>
 		            <?php if (!empty($galleryImages[$i])) :?>
 
-						<div class="item" style="background-image: url(<?php echo tt($galleryImages[$i]['full'][0],580,550); ?>);"></div>
+						<div class="item" style="background-image: url(<?php echo tt($galleryImages[$i]['full'][0],575,300); ?>);"></div>
 					
 					<?php endif; ?>
 					<?php endfor; ?>
@@ -62,7 +62,7 @@ get_header();
 							          	<?php for ($i = 0; $i < $imagesCount; $i++): ?>
 							            <?php if (!empty($galleryImages[$i])) :?>
 
-											<div class="item" style="background-image: url(<?php echo tt($galleryImages[$i]['full'][0],580,550); ?>);"></div>
+											<div class="item" style="background-image: url(<?php echo tt($galleryImages[$i]['full'][0],575,300); ?>);"></div>
 										
 										<?php endif; ?>
 										<?php endfor; ?>
@@ -84,7 +84,7 @@ get_header();
 
 		</div>
 
-		<h2>Management Team</h2>
+		<h2 class="mgmt">Management Team</h2>
 
 		<?php
 			$query_leadership_team = new wp_query(array(

@@ -13,7 +13,7 @@ get_header();
 
 	<div class="container">	
 
-		<h2><?php the_title(); ?></h2>
+		<h2 class="title"><?php the_title(); ?></h2>
 
 		<?php
 			$query_leadership = new wp_query(array(
@@ -30,7 +30,7 @@ get_header();
 					$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
 				?>
 				
-					<div class="left" style="background-image: url(<?php echo tt($imgsrc[0],580,550); ?>);"></div>
+					<div class="left" style="background-image: url(<?php echo tt($imgsrc[0],580,620); ?>);"></div>
 
 					<div class="right">
 						

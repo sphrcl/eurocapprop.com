@@ -47,11 +47,13 @@ get_header();
 				<?php } ?>
 
 			</div>
-
+			
+			<!--
 			<div class="controls">
 				<div class="prev" type="button"></div>
 				<div class="next" type="button"></div>
 			</div>
+			-->
 
 		<?php endif; ?>
 
