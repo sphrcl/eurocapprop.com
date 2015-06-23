@@ -27,7 +27,7 @@ time, mark, audio, video, button, textarea, a {
 	outline: 0;
 	text-decoration: none;
 	font-weight: normal;
-	font-family: 'avenir-med',"Helvetica", "Arial";
+	/* font-family: "AvenirLTStd-Medium","Helvetica", "Arial"; */
 	-moz-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -89,7 +89,7 @@ ul li {
 
 p {
   color: #787878;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Book',"Helvetica", "Arial";
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: 0.03em;
@@ -207,7 +207,7 @@ a.btn1 {
   line-height: 1;
   padding: 15px 45px;
   text-transform: uppercase;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   letter-spacing: -0.005em;
 }
 a.btn1:hover {
@@ -227,7 +227,7 @@ a.btn2 {
   line-height: 1.3;
   padding: 22px 45px;
   text-transform: uppercase;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   letter-spacing: 0.03em;
 }
 
@@ -283,7 +283,7 @@ a.btn3:hover {
 
 .copyblock h2 {
   font-size: 48px;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Book',"Helvetica", "Arial";
   line-height: 72px;
   color: #353535;
   letter-spacing: 0.01em;
@@ -386,7 +386,7 @@ div#header {
 
 .reservebox p {
   color: #787878;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   font-size: 14px;
   line-height: 23px;
   padding-bottom: 0;
@@ -440,7 +440,7 @@ ul.topnavigation, #menu-footer-menu {
 }
 ul.topnavigation li {
   display: inline-block;
-  font-family: 'avenir-bold',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   color: #fff;
   font-size: 13px;
   text-transform: uppercase;
@@ -449,7 +449,7 @@ ul.topnavigation li {
 }
 
 ul.topnavigation li a {
-  font-family: 'avenir-bold',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   color: #333;
 }
 
@@ -480,7 +480,7 @@ ul.topnavigation li a:hover {
 	margin-bottom: 30px;
     margin-right: 4%;
 	  color: #787878;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Book',"Helvetica", "Arial";
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: 0.03em;
@@ -656,7 +656,7 @@ ul.topnavigation li a:hover {
 
 .home .menu a {
     color: #000;
-    font-family: 'avenir-med',"Helvetica", "Arial";
+    font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
 }
 	.home .menu a:hover, .menu a:hover {
 		color: #b18933;
@@ -1190,7 +1190,7 @@ ul.topnavigation li a:hover {
 }
 
 .mw-open {
-	padding: 55px 0;
+	padding: 85px 0;
 	position: relative;
 }
 
@@ -1260,7 +1260,7 @@ ul.topnavigation li a:hover {
 }
 
 .contact-container p.address {
-	  font-family: 'avenir-med',"Helvetica", "Arial";
+	  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
 	  color: #b6b6b6;
 	  line-height: 24px;
 	    width: 49%;
@@ -1457,7 +1457,7 @@ div#about {
 div#about h2 {
   font-size: 54px;
   line-height: 72px;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   text-align: right;
   letter-spacing: 0.01em;
 }
@@ -1470,7 +1470,7 @@ div#about h2 {
 
 .aboutbox p {
   font-size: 16px;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Book',"Helvetica", "Arial";
 }
 
 .aboutbox.about1 {
@@ -1478,7 +1478,7 @@ div#about h2 {
 }
 
 .aboutbox.about1 h4 {
-    font-family: 'avenir-med',"Helvetica", "Arial";
+    font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
     font-size: 35px;
     letter-spacing: 0.02em;
     line-height: 1.2;
@@ -1488,7 +1488,7 @@ div#about h2 {
 
 .aboutbox.about1 p {
     color: #606163;
-    font-family: 'avenir-bold',"Helvetica", "Arial";
+    font-family: 'AvenirLTStd-Book',"Helvetica", "Arial";
     font-size: 15px;
     letter-spacing: 0.02em;
     line-height: 16px;
@@ -1553,7 +1553,7 @@ span.wpcf7-form-control-wrap {
 
 .lining h2 {
 	  font-size: 28px;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   line-height: 42px;
   color: #353535;
   margin: 12px 0;
@@ -1566,7 +1566,7 @@ span.wpcf7-form-control-wrap {
 	border: 4px solid #ddd;
 	margin: 5px 0;
 	  font-size: 15px;
-  font-family: 'avenir-bold',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   text-transform: none;
   color: #787878;
   letter-spacing: 0.03em;
@@ -1578,7 +1578,7 @@ span.wpcf7-form-control-wrap {
 	border: 4px solid #ddd;
 	margin: 5px 0;
 	  font-size: 15px;
-  font-family: 'avenir-bold',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   text-transform: uppercase;
   color: #787878;
   letter-spacing: 0.03em;
@@ -1619,7 +1619,7 @@ span.wpcf7-form-control-wrap {
 	border: 4px solid #ddd;
 	margin: 5px 0;
 	  font-size: 15px;
-  font-family: 'avenir-bold',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Book',"Helvetica", "Arial";
   text-transform: uppercase;
   color: #787878;
   letter-spacing: 0.03em;
@@ -1633,7 +1633,7 @@ span.wpcf7-form-control-wrap {
   line-height: 1;
   padding: 15px 45px;
   text-transform: uppercase;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   letter-spacing: -0.005em;
   cursor: pointer;
 }
@@ -1671,13 +1671,13 @@ span.wpcf7-form-control-wrap {
 	color: #fff;
 	font-size: 42px;
   line-height: 5px;
-  font-family: fabio,'avenir-med',"Helvetica", "Arial";
+  font-family: fabio,'AvenirLTStd-Medium',"Helvetica", "Arial";
 }
 
 
 .homepageslider .flex-caption p {
   float: right;
-  font-family: 'avenir-med',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   font-size: 23px;
   line-height: 23px;
   text-align: right;
@@ -3164,7 +3164,6 @@ body .ui-tooltip {
 	  border-right: none;
 	  border-radius: 0;
 	  color: #636363;
-	  font-family: 'GothamBold';
 	  text-transform: uppercase;
 	  -webkit-font-smoothing: antialiased;
 	  -moz-osx-font-smoothing: grayscale;
@@ -3174,7 +3173,7 @@ body .ui-tooltip {
 	  z-index: 2;
 	  letter-spacing: 1px;
 	  background: #fff;
-	    font-family: 'avenir-bold',"Helvetica", "Arial";
+	    font-family: 'AvenirLTStd-Book',"Helvetica", "Arial";
 	  font-size: 14px;
 	  line-height: 18px;
 	  letter-spacing: 0.03em;
@@ -3225,7 +3224,7 @@ a.mobihid {
 
 .ui-datepicker .ui-datepicker-title {
 	color: #636363;
-	    font-family: 'avenir-bold',"Helvetica", "Arial";
+	    font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   font-size: 14px;
   line-height: 23px;
   letter-spacing: 0.03em;
@@ -3238,7 +3237,7 @@ a.mobihid {
 
 .ui-datepicker .ui-datepicker-title span {
 	color: #636363;
-	    font-family:'avenir-bold',"Helvetica", "Arial";
+	    font-family:'AvenirLTStd-Medium',"Helvetica", "Arial";
   font-size: 14px;
   line-height: 23px;
   letter-spacing: 0.03em;
@@ -3279,7 +3278,7 @@ a.mobihid {
 	  width: calc(100% - 23px);
   padding: 10px 0 10px 20px;
   min-height: 34px;
-   font-family: 'avenir-bold',"Helvetica", "Arial";
+   font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.03em;
@@ -3291,7 +3290,7 @@ a.mobihid {
    	 }
 }
 .ui-datepicker th span {
-	font-family: 'avenir-bold',"Helvetica", "Arial";
+	font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
 }
 .formfields .button {
 	width: 100%;
@@ -3304,7 +3303,7 @@ a.mobihid {
   font-size: 30px;
   line-height: 1;
   padding: 20px 45px 12px 45px;
-    font-family: fabio,'avenir-med',"Helvetica", "Arial";
+    font-family: fabio,'AvenirLTStd-Medium',"Helvetica", "Arial";
   -webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	-o-transition: all .4s ease;
@@ -3452,7 +3451,7 @@ a.mobihid {
   font-size: 13px;
   line-height: 40px;
   text-transform: uppercase;
-  font-family: 'avenir-bold',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   letter-spacing: 0.1em;
   width: 570px;
 }
@@ -3461,7 +3460,7 @@ a.mobihid {
   font-size: 13px;
   line-height: 40px;
   text-transform: uppercase;
-  font-family: 'avenir-bold',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   letter-spacing: 0.1em;
   width: 570px;
   color: #fff;
@@ -3471,7 +3470,7 @@ a.mobihid {
 font-size: 13px;
 line-height: 40px;
 text-transform: uppercase;
-font-family: 'avenir-bold',"Helvetica", "Arial";
+font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
 letter-spacing: 0.1em;
 float: left;
 width: 570px;
@@ -3481,7 +3480,7 @@ width: 570px;
   font-size: 13px;
   line-height: 40px;
   text-transform: uppercase;
-  font-family: 'avenir-bold',"Helvetica", "Arial";
+  font-family: 'AvenirLTStd-Medium',"Helvetica", "Arial";
   letter-spacing: 0.1em;
   float: left;
   width: 570px;
