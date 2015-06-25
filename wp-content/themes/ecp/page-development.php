@@ -169,7 +169,7 @@ get_header();
 
 			<div class="development-divider">
 
-			<h2>Properties | International</h2>
+			<h2>Properties | Sister Company Abroad</h2>
 
 			<?php
 				$query_development_international = new wp_query(array(
