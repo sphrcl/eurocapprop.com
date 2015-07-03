@@ -380,6 +380,9 @@
 	.contact-container p.address { width: 100%; float: none; text-align: left; }
 	.contact-container .tel-fax  { width: 100%; float: none; }
 	.container .content { width: 100%; }
+
+	.mw-img {width: 100%;}
+	.mw-content {float: left; padding: 0 10px; width: 90%;}
 }
 
 
