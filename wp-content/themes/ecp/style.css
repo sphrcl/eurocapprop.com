@@ -1219,6 +1219,10 @@ ul.topnavigation li a:hover {
   width: 53%;
 }
 
+.mw-content .gallerybanner {
+  display: none;
+}
+
 .close-button, .mem-close {
   background: url("images/close-button.png") no-repeat scroll 0 0 transparent;
   background-size: cover;
