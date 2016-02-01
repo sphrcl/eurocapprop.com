@@ -1220,18 +1220,18 @@ ul.topnavigation li a:hover {
 }
 
 .mw-content::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
 }
 
 .mw-content::-webkit-scrollbar {
-	width: 8px;
-	background-color: #F5F5F5;
+  width: 8px;
+  background-color: #F5F5F5;
 }
 
 .mw-content::-webkit-scrollbar-thumb {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
 }
 
 .mw-content .gallerybanner {
