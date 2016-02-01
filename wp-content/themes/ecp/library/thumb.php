@@ -139,6 +139,8 @@ if(! isset($ALLOWED_SITES)){
 		'imgur.com',
 		'imageshack.us',
 		'tinypic.com',
+		'eurocapprop.com',
+		'eurocapprop.watergate.sphrcl.co'
 	);
 }
 // -------------------------------------------------------------
