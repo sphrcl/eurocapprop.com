@@ -190,6 +190,9 @@
 	.address, .phone {
 		text-align: center;
 	}
+	.page_development .left.dev-slider.owl-carousel.owl-theme{
+		width: 100%;
+	}
 
 }
 
@@ -227,6 +230,14 @@
 	.slider-caption {
 	  width: 70%;
 	  left: 15%;
+	  top:55%;
+	}
+	.page-slider{
+		height: 550px;
+	}
+
+	.page_development .left.dev-slider.owl-carousel.owl-theme{
+		width: 100%;
 	}
 
 }
@@ -383,6 +394,17 @@
 
 	.mw-img {width: 100%;}
 	.mw-content {float: left; padding: 0 10px; width: 90%;}
+
+	.page-slider{
+		height: 550px;
+	}
+	.slider-caption{
+		top:55%;
+	}
+
+	.page_development .left.dev-slider.owl-carousel.owl-theme{
+		width: 100%;
+	}
 }
 
 
@@ -410,6 +432,18 @@
 
 	div#slider {
 		margin-top: 30px;
+	}
+
+
+	.page-slider{
+		height: 550px;
+	}
+	.slider-caption{
+		top:55%;
+	}
+
+	.page_development .left.dev-slider.owl-carousel.owl-theme{
+		width: 100%;
 	}
 
 }
@@ -488,7 +522,20 @@
 
 #footer .container > a img { width: 80px }
 
+	.page-slider{
+		height: 550px;
+	}
+	.slider-caption{
+		top:55%;
+	}
+
+	.page_development .left.dev-slider.owl-carousel.owl-theme{
+		width: 100%;
+	}
+
 }
+
+
 
 
 
